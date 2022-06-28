@@ -1,0 +1,104 @@
+.list-group,
+.list-group-item {
+  border: none !important;
+  border-radius: 0 !important; }
+
+.list-group-item {
+  border-bottom: 1px solid #bcbcbc !important; }
+
+.item_identifier {
+  font-weight: bold !important; }
+
+.material-icons {
+  cursor: pointer; }
+
+.card {
+  margin-bottom: 20px; }
+
+.form-control,
+.btn {
+  font-size: initial !important; }
+
+.btn {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important; }
+  .btn.btn-primary {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00ff00), to(#068300)) !important;
+    background-image: linear-gradient(to bottom, #00ff00, #068300) !important;
+    border: none;
+    color: #242222;
+    font-weight: bold; }
+  .btn.btn-xs {
+    font-size: .9em !important;
+    padding: 8px 16px !important; }
+
+label {
+  position: relative;
+  bottom: -5px !important;
+  font-size: .9em !important; }
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 0 !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.actions i,
+.actions img {
+  margin-right: 15px;
+  cursor: pointer; }
+
+th {
+  color: #068300 !important; }
+
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4000;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 75px;
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+  visibility: hidden; }
+  #loading.active {
+    opacity: 1;
+    visibility: visible; }
+  #loading img {
+    max-width: 250px; }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: 1px solid #068300 !important;
+  background-color: #068300 !important;
+  background: #068300 !important;
+  border-radius: 15px !important;
+  color: white !important; }
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #068300 !important; }
+
+.text-success {
+  color: #068300 !important; }
+
+.days .day {
+  background: #068300;
+  padding: 5px 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  color: white; }

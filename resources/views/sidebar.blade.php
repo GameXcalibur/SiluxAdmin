@@ -25,7 +25,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="dashboard.php">
+            <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="material-icons">event</i>
                 <span class="menu-title">Dashboard</span>
                 <div class="badge badge-success d-none"></div>

@@ -32,14 +32,75 @@ class HomeController extends Controller
 
     }
     public function devices(){
+
+
         return view('devices');
+
+    }
+
+    public function dashboard(){
+        $lastOnlineDevs = \DB::select('SELECT * FROM lastOnline');
+        $deviceStats = [];
+        foreach($lastOnlineDevs as $lastOnlineDev){
+
+
+            $deviceStats[$lastOnlineDev->hubSerial][$lastOnlineDev->serial]['status'] = $lastOnlineDev->extra;
+
+
+            switch($lastOnlineDev->extra){
+                case 'Offline':
+                    if(isset($deviceStats[$lastOnlineDev->hubSerial]['off']))
+                        $deviceStats[$lastOnlineDev->hubSerial]['off']++;
+                    else
+                        $deviceStats[$lastOnlineDev->hubSerial]['off'] = 1;
+                    break;
+                case 'Online':
+                    if(isset($deviceStats[$lastOnlineDev->hubSerial]['on']))
+                        $deviceStats[$lastOnlineDev->hubSerial]['on']++;
+                    else
+                        $deviceStats[$lastOnlineDev->hubSerial]['on'] = 1;
+                    break;
+            }
+            if(isset($deviceStats[$lastOnlineDev->hubSerial]['total']))
+                $deviceStats[$lastOnlineDev->hubSerial]['total']++;
+            else
+                $deviceStats[$lastOnlineDev->hubSerial]['total'] = 1;
+
+                
+        }
+
+        foreach($deviceStats as $key=>&$deviceStat){
+            $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$key.'"');
+            if(!$hubPerm)
+                $deviceStat['name'] = "Not Named";
+            else{
+
+                $deviceStat['name'] = $hubPerm[0]->hubName;
+
+            }
+            $percentageOff = 0;
+            if(isset($deviceStat['off']))   
+                $percentageOff = $deviceStat['off']/$deviceStat['total']*100;
+            $deviceStat['percentOff'] = $percentageOff;
+            $deviceStat['status'] = 'Online';
+            $deviceStat['statusH'] = '#3CBC3C';
+
+            if($percentageOff > 80){
+                $deviceStat['status'] = 'Offline';
+            $deviceStat['statusH'] = '#FF2828';
+
+            }
+        }
+        return view('dashboard', [
+            'hubs' => $deviceStats
+        ]);
 
     }
 
     public function getDevices(Request $request){
         $data = $request->all();
         if(isset($data['getAllDevices'])){
-            $results = \DB::select('SELECT d.serial_no, d.device_name, t.`name` as type, d.mac_address, d.hub_serial_no, h.hubName, d.date_time_registered FROM devices d LEFT JOIN device_types t ON t.code = d.`type` LEFT JOIN hubPermissions h ON h.hubSerial = d.hub_serial_no ');
+            $results = \DB::select('SELECT d.serial_no, d.device_name, t.`name` as type, d.mac_address, d.hub_serial_no, h.hubName, d.date_time_registered FROM devices d LEFT JOIN device_types t ON t.code = d.`type` LEFT JOIN hubPermissions h ON h.hubSerial = d.hub_serial_no WHERE `type` = "026"');
 
             $return = "";
 

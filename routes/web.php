@@ -27,6 +27,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
     Route::get('/devices', [App\Http\Controllers\HomeController::class, 'devices'])->name('devices');
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+
 
     Route::post('/devices', [App\Http\Controllers\HomeController::class, 'getDevices'])->name('devices.get')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);;
 

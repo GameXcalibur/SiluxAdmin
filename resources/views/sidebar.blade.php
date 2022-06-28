@@ -16,24 +16,24 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="admins.php">
                 <i class="material-icons">people_alt</i>
                 <span class="menu-title">Admins</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li>
+        </li> -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="material-icons">event</i>
                 <span class="menu-title">Dashboard</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" href="hubs.php">
+            <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="material-icons">device_hub</i>
                 <span class="menu-title">Hubs</span>
                 <div class="badge badge-success d-none"></div>
@@ -48,37 +48,37 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="schedules.php">
                 <i class="material-icons">dashboard</i>
                 <span class="menu-title">Schedules</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" href="errors.php">
+            <a class="nav-link" href="{{ route('errors') }}">
                 <i class="material-icons">warning</i>
                 <span class="menu-title">Errors</span>
                 <div class="badge badge-success d-none"></div>
             </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="reports.php">
                 <i class="material-icons">description</i>
                 <span class="menu-title">Reports</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li>
+        </li> -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="settings.php">
                 <i class="material-icons">settings</i>
                 <span class="menu-title">Settings</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

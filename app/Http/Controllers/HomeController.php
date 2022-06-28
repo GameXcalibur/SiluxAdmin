@@ -37,6 +37,79 @@ class HomeController extends Controller
         return view('devices');
 
     }
+    public function errors(){
+
+
+        return view('errors');
+
+    }
+
+    public function getHubInfo(Request $request){
+        $data = $request->all();
+        $returnObj = [];
+        $offlineDevs = \DB::select('SELECT * FROM lastOnline WHERE hubSerial = "'.$data["hubSer"].'" AND extra = "Offline"');
+        $offlineRet = "";
+
+        foreach($offlineDevs as $r){
+            $deviceObj = \DB::select('SELECT * FROM devices WHERE serial_no = "'.$r->serial.'"');
+
+
+            $offlineRet .= '<tr>';
+
+            if(!$deviceObj){
+                $offlineRet .= '<td>';
+                $offlineRet .= 'NO NAME';
+                $offlineRet .= '</td>';
+
+                $offlineRet .= '<td>';
+                $offlineRet .= 'NO TYPE';
+                $offlineRet .= '</td>';
+            }else{
+
+                $offlineRet .= '<td>';
+                $offlineRet .= $deviceObj[0]->device_name;
+                $offlineRet .= '</td>';
+
+                $deviceType = \DB::select('SELECT * FROM device_types WHERE code = "'.$deviceObj[0]->type.'"');
+
+                $offlineRet .= '<td>';
+                $offlineRet .= $deviceType[0]->name;
+                $offlineRet .= '</td>';
+            }
+
+
+
+            $offlineRet .= '<td>';
+            $offlineRet .= $r->serial;
+            $offlineRet .= '</td>';
+
+
+            $offlineRet .= '<td>';
+            $offlineRet .= $r->hubSerial;
+            $offlineRet .= '</td>';
+
+
+            if(!$deviceObj){
+                $offlineRet .= '<td>';
+                $offlineRet .= 'N/A';
+                $offlineRet .= '</td>';
+            }else{
+
+                $offlineRet .= '<td>';
+                $offlineRet .= $deviceObj[0]->date_time_registered;
+                $offlineRet .= '</td>';
+            }
+
+
+
+            $offlineRet .= '</tr>';
+
+            
+        }
+        $returnObj['offDev'] = $offlineRet;
+        return response()->json($returnObj);
+
+    }
 
     public function dashboard(){
         $lastOnlineDevs = \DB::select('SELECT * FROM lastOnline');

@@ -28,6 +28,72 @@ p{
   background-color: rgba(0,0,0,0.6); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
+
+.search-container {
+	position: relative;
+	display: inline-block;
+	margin: 4px 2px;
+	height: 50px;
+	width: 50px;
+	vertical-align: bottom;
+}
+
+.mglass {
+	display: inline-block;
+	pointer-events: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+	position: absolute;
+	font-size: 22px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search {
+	position: absolute;
+	left: 70px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
+	background-color: grey;
+    border-radius: 10px;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; /* Bar width+1px */
+	padding: 0 16px 0 0;
+}
+
+.expandright {
+	left: auto;
+	right: 49px; /* Button width-1px */
+}
+
+.expandright:focus {
+	padding: 0 0 0 16px;
+}
 </style>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
@@ -72,9 +138,21 @@ p{
 
     <div class="content-wrapper">
         <div class="row">
-            <h2>Registered Hubs</h2>
+            <span>
+                <span style="font-size: 28px; font-weight: bold;">All Hubs | </span>
+                <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
+                <button type="button" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
+                <div class="search-container">
+                    <form action="/search" method="get">
+                        <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
+                        <label class="button searchbutton btn btn-warning btn-sm"  style="border-radius: 20px; height: 100%;" for="searchleft"><span style="font-size: 26px;" class="material-symbols-outlined">pageview</span></label>
+                    </form>
+                </div>
+            </span>
         </div>
-        <div class="row">
+        <hr>
+        <div class="row" id="allHubsDiv">
+
             @foreach ($hubs as $key => $hub)
             <div class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer;" onclick="hubDetails('{{$hub['name']}}', '{{$key}}');">
                 <h4>{{$hub['name']}}</h4>
@@ -116,6 +194,27 @@ $( document ).ready(function() {
 
 
 });
+var input = document.getElementById("searchleft");
+input.addEventListener("input", myFunction);
+
+function myFunction(e) {
+  var filter = e.target.value.toUpperCase();
+
+  var list = document.getElementById("allHubsDiv");
+  var divs = list.getElementsByTagName("div");
+  for (var i = 0; i < divs.length; i++) {
+    var a = divs[i].getElementsByTagName("h4")[0];
+
+    if (a) {
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+      } else {
+        divs[i].style.display = "none";
+      }
+    }
+  }
+
+}
 function hubDetails(name, ser) {
   document.getElementById("popupHeading").innerHTML = name
 

@@ -13,7 +13,7 @@
         body,
         html {
             height: 100vh;
-            background-image: url("{{ asset('images') }}/bg.jpg");
+            background-image: linear-gradient(#000000, #13479d);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -59,10 +59,11 @@
 
         <div class="row">
             <div class="col-md-6 mt-4 offset-md-3">
-
+                <div class="row justify-content-center">
+                    <img src="{{ asset('images') }}/logo.png" width="80%"></img>
+                </div>
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="text-center bold">Log In</h3>
 
                         <form method="POST" action="{{ route('login.2') }}">
                         @csrf
@@ -91,16 +92,21 @@
 
 
 
-                        <div class="form-group"  style="left: 30px; position: relative;">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                <label for="remember">
-                    {{ __('Remember Me') }}
-                </label>                            
-                </div>
 
                         <div class="form-group">
                                 <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-block" type="button">Don't Have An Account?</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-block" type="button">Forgot Password?</button>
+                                    </div>
+
+                                </div>
+
                             </div>
                     </form>
 

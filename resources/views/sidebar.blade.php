@@ -1,20 +1,15 @@
-<nav class="sidebar sidebar-offcanvas sidebar-dark" id="sidebar" style=" z-index:4000 !important">
+            
+<nav class="sidebar sidebar-offcanvas sidebar-dark" id="sidebar" style=" z-index:4000 !important; background-image: linear-gradient(#000000, #13479d);">
     <ul class="nav">
         <!--  Profile thingy -->
         <li class="nav-item nav-profile">
-            <img src="{{ asset('images') }}/faces/user.png" alt="profile image">
+            <img src="{{ asset('images') }}/logo.png" alt="profile image">
             <p class="text-center font-weight-medium">{{ Auth::user()->email }}</p>
         </li>
-
+        <hr>
         <!--Navigation Items -->
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('profile') }}">
-                <i class="material-icons">account_circle</i>
-                <span class="menu-title">Profile</span>
-                <div class="badge badge-success d-none"></div>
-            </a>
-        </li>
+
 
         <!-- <li class="nav-item">
             <a class="nav-link" href="admins.php">
@@ -40,29 +35,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('devices') }}">
-                <i class="material-icons">lightbulb</i>
-                <span class="menu-title">Devices</span>
-                <div class="badge badge-success d-none"></div>
-            </a>
-        </li>
 
-        <!-- <li class="nav-item">
-            <a class="nav-link" href="schedules.php">
-                <i class="material-icons">dashboard</i>
-                <span class="menu-title">Schedules</span>
-                <div class="badge badge-success d-none"></div>
-            </a>
-        </li> -->
-
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('errors') }}">
-                <i class="material-icons">warning</i>
-                <span class="menu-title">Errors</span>
-                <div class="badge badge-success d-none"></div>
-            </a>
-        </li>
 
         <!-- <li class="nav-item">
             <a class="nav-link" href="reports.php">

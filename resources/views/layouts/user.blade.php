@@ -48,18 +48,7 @@
 </head>
 
 <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    thead th,
-    input,
-    .form-control {
-        font-family: 'Josefin Sans', sans-serif !important;
-    }
+
 
     .icon-btn {
         cursor: pointer;
@@ -132,7 +121,7 @@
 
     <div id="app" class="container-fluid page-body-wrapper">
     @include('sidebar')
-    <div class="main-panel" style="min-height: 100vh;"> 
+    <div class="main-panel" style="min-height: 100vh; max-height: 100vh; overflow: scroll;"> 
         @yield('content')
     </div>
     </div>

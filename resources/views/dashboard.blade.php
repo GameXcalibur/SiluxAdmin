@@ -139,7 +139,7 @@ p{
     <div class="content-wrapper">
         <div class="row">
             <span>
-                <span style="font-size: 28px; font-weight: bold;">All Hubs | </span>
+                <span style="font-size: 28px; font-weight: bold;">My Hubs | </span>
                 <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
                 <button type="button" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
                 <div class="search-container">

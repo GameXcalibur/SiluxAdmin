@@ -143,10 +143,11 @@ class HomeController extends Controller
         }
 
         foreach($deviceStats as $key=>&$deviceStat){
-            $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$key.'"');
-            if(!$hubPerm)
-                $deviceStat['name'] = "Not Named";
-            else{
+            $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$key.'" AND email = "'.\Auth::user()->email.'"');
+            if(!$hubPerm){
+                unset($deviceStats[$key]);
+                continue;
+            }else{
 
                 $deviceStat['name'] = $hubPerm[0]->hubName;
 

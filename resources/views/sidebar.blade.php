@@ -28,7 +28,7 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">
+            <a class="nav-link" href="{{ route('hubs') }}">
                 <i class="material-icons">device_hub</i>
                 <span class="menu-title">Hubs</span>
                 <div class="badge badge-success d-none"></div>

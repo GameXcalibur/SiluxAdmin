@@ -759,7 +759,7 @@ class HomeController extends Controller
 		$user = User::where('email', $data['email'])->where('password', $data['password'])->first();
 		if($user){
             \Auth::login($user, false);
-            return redirect()->route('dashboard');
+            return redirect()->route('hubs');
 		}
 
 		return redirect()->route('login.2');

@@ -206,7 +206,7 @@ function myFunction(e) {
   var list = document.getElementById("allHubsDiv");
   var divs = list.getElementsByTagName("div");
   for (var i = 0; i < divs.length; i++) {
-    var a = divs[i].getElementsByTagName("h4")[0];
+    var a = divs[i].getElementsByTagName("p")[0];
 
     if (a) {
       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {

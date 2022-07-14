@@ -154,13 +154,16 @@ p{
         <div class="row" id="allHubsDiv">
 
             @foreach ($hubs as $key => $hub)
-            <div class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer;" onclick="hubDetails('{{$hub['name']}}', '{{$key}}');">
-                <h4>{{$hub['name']}}</h4>
+            <div class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', '{{$hub['api_response'] == false ? 'false' : 'true'}}');">
+                <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
+                <p style="font-size: 8px"><b>{{$hub['api_response'] == false ? 'Last Online Data - No Response From Hub' : 'Live Data'}}</b></p>
+                <hr>
+                
                 <p style="font-size: 13px">Total Devices: {{$hub['total']}}</p>
                 <p style="font-size: 13px">Devices Offline: {{isset($hub['off']) ? $hub['off'] : 0}}</p>
                 <p style="font-size: 13px">Devices Online: {{isset($hub['on']) ? $hub['on'] : 0}}</p>
 
-                <p style="font-size: 13px">Percent Offline: {{$hub['percentOff']}}</p>
+                <p style="font-size: 13px">Percent Offline: {{round($hub['percentOff'], 2)}}</p>
             </div> 
             @endforeach
 
@@ -215,7 +218,7 @@ function myFunction(e) {
   }
 
 }
-function hubDetails(name, ser) {
+function hubDetails(name, ser, live) {
   document.getElementById("popupHeading").innerHTML = name
 
   $('#offlineTable').DataTable().destroy();
@@ -226,7 +229,9 @@ $.ajax({
     url: '/hub/get',
     type: 'post',
     data: {
-        hubSer: ser
+        hubSer: ser,
+        live: live
+
     },
     success: feedback => {
 
@@ -234,11 +239,19 @@ $.ajax({
             console.log(feedback);
             if ($('#offlineTableBody').html(feedback.offDev)) {
                 $('#offlineTable').DataTable();
-                resolve();
-                document.getElementById("overlay").style.display = "block";
-                document.getElementById("loader").style.display = "none";
-
             }
+            if ($('#devonbatTableBody').html(feedback.onBattDev)) {
+                $('#devonbatTable').DataTable();
+            }
+            if ($('#batopenTableBody').html(feedback.battOpen)) {
+                $('#batopenTable').DataTable();
+            }
+            if ($('#batshortTableBody').html(feedback.battShort)) {
+                $('#batshortTable').DataTable();
+            }
+            resolve();
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("loader").style.display = "none";
         });
 
 

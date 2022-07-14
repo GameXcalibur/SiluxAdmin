@@ -28,6 +28,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
     Route::get('/devices', [App\Http\Controllers\HomeController::class, 'devices'])->name('devices');
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/hubs', [App\Http\Controllers\HomeController::class, 'hubs'])->name('hubs');
+
     Route::get('/errors', [App\Http\Controllers\HomeController::class, 'errors'])->name('errors');
 
 

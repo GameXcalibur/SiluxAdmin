@@ -94,6 +94,52 @@ p{
 .expandright:focus {
 	padding: 0 0 0 16px;
 }
+
+    						/* Center the loader */
+                            .loader {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 1;
+			width: 120px;
+			height: 120px;
+			margin: -76px 0 0 -76px;
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #3498db;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+			display: none;
+			}
+
+			@-webkit-keyframes spin {
+			0% { -webkit-transform: rotate(0deg); }
+			100% { -webkit-transform: rotate(360deg); }
+			}
+
+			@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+			}
+
+			/* Add animation to "page content" */
+			.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 1s;
+			animation-name: animatebottom;
+			animation-duration: 1s
+			}
+
+			@-webkit-keyframes animatebottom {
+			from { bottom:-100px; opacity:0 } 
+			to { bottom:0px; opacity:1 }
+			}
+
+			@keyframes animatebottom { 
+			from{ bottom:-100px; opacity:0 } 
+			to{ bottom:0; opacity:1 }
+			}
 </style>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
@@ -155,6 +201,8 @@ p{
 
             @foreach ($hubs as $key => $hub)
             <div class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', '{{$hub['api_response'] == false ? 'false' : 'true'}}');">
+                <div class="loader"></div>
+                
                 <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
                 <p style="font-size: 8px"><b>{{$hub['api_response'] == false ? 'Last Online Data - No Response From Hub' : 'Live Data'}}</b></p>
                 <hr>
@@ -194,9 +242,26 @@ $( document ).ready(function() {
         $('#batshortTable').DataTable();
         $('#devonbatTable').DataTable();
         $('#batopenTable').DataTable();
-
+        liveInit();
 
 });
+function liveInit(){
+    var filter = 'Live';
+
+    var list = document.getElementById("allHubsDiv");
+    var divs = list.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++) {
+        var a = divs[i].getElementsByTagName("p")[1];
+
+        if (a) {
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            divs[i].getElementsByTagName("div")[0].style.display = "block";
+            } else {
+                divs[i].getElementsByTagName("div")[0].style.display = "none";
+            }
+        }
+    }
+}
 var input = document.getElementById("searchleft");
 input.addEventListener("input", myFunction);
 

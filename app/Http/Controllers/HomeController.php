@@ -53,6 +53,8 @@ class HomeController extends Controller
         $onBattRet = "";
         $battOpen = "";
         $battShort = "";
+        $allDevices = "";
+
 
 
 
@@ -79,6 +81,56 @@ class HomeController extends Controller
 
             foreach($totalHubDevices as $totalHubDevice){
                 $deviceObj = \DB::select('SELECT * FROM devices WHERE serial_no = "'.$totalHubDevice['serial'].'"');
+
+                $allDevices .= '<tr>';
+    
+                if(!$deviceObj){
+                    $allDevices .= '<td>';
+                    $allDevices .= 'NO NAME';
+                    $allDevices .= '</td>';
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= 'NO TYPE';
+                    $allDevices .= '</td>';
+                }else{
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceObj[0]->device_name;
+                    $allDevices .= '</td>';
+    
+                    $deviceType = \DB::select('SELECT * FROM device_types WHERE code = "'.$deviceObj[0]->type.'"');
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceType[0]->name;
+                    $allDevices .= '</td>';
+                }
+    
+    
+    
+                $allDevices .= '<td>';
+                $allDevices .= $totalHubDevice['serial'];
+                $allDevices .= '</td>';
+    
+    
+                $allDevices .= '<td>';
+                $allDevices .= $data["hubSer"];
+                $allDevices .= '</td>';
+    
+    
+                if(!$deviceObj){
+                    $allDevices .= '<td>';
+                    $allDevices .= 'N/A';
+                    $allDevices .= '</td>';
+                }else{
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceObj[0]->date_time_registered;
+                    $allDevices .= '</td>';
+                }
+    
+    
+    
+                $allDevices .= '</tr>';
 
                 if($totalHubDevice['state'] == '019' || $totalHubDevice['state'] == '010'){
                     $offlineRet .= '<tr>';
@@ -366,6 +418,66 @@ class HomeController extends Controller
     
                 
             }
+
+            $allDevs = \DB::select('SELECT * FROM lastOnline WHERE hubSerial = "'.$data["hubSer"].'"');
+
+            foreach($allDevs as $r){
+                $deviceObj = \DB::select('SELECT * FROM devices WHERE serial_no = "'.$r->serial.'"');
+    
+    
+                $allDevices .= '<tr>';
+    
+                if(!$deviceObj){
+                    $allDevices .= '<td>';
+                    $allDevices .= 'NO NAME';
+                    $allDevices .= '</td>';
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= 'NO TYPE';
+                    $allDevices .= '</td>';
+                }else{
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceObj[0]->device_name;
+                    $allDevices .= '</td>';
+    
+                    $deviceType = \DB::select('SELECT * FROM device_types WHERE code = "'.$deviceObj[0]->type.'"');
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceType[0]->name;
+                    $allDevices .= '</td>';
+                }
+    
+    
+    
+                $allDevices .= '<td>';
+                $allDevices .= $r->serial;
+                $allDevices .= '</td>';
+    
+    
+                $allDevices .= '<td>';
+                $allDevices .= $r->hubSerial;
+                $allDevices .= '</td>';
+    
+    
+                if(!$deviceObj){
+                    $allDevices .= '<td>';
+                    $allDevices .= 'N/A';
+                    $allDevices .= '</td>';
+                }else{
+    
+                    $allDevices .= '<td>';
+                    $allDevices .= $deviceObj[0]->date_time_registered;
+                    $allDevices .= '</td>';
+                }
+    
+    
+    
+                $allDevices .= '</tr>';
+    
+                
+            }
+
         }
 
 
@@ -373,6 +485,8 @@ class HomeController extends Controller
         $returnObj['battOpen'] = $battOpen;
 
         $returnObj['onBattDev'] = $onBattRet;
+        $returnObj['allDevices'] = $allDevices;
+
         $returnObj['battShort'] = $battShort;
 
 

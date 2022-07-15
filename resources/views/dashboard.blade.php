@@ -166,7 +166,7 @@ p{
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent" style="background: #eee; height: 90%;">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="color: #000">TEST1</div>
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="color: #000">@include('alldevices')</div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">@include('batshort')</div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">@include('batteryopen')</div>
                     <div class="tab-pane fade" id="offline" role="tabpanel" aria-labelledby="offline-tab">@include('devicesoffline')</div>
@@ -242,6 +242,8 @@ $( document ).ready(function() {
         $('#batshortTable').DataTable();
         $('#devonbatTable').DataTable();
         $('#batopenTable').DataTable();
+        $('#allDevTable').DataTable();
+
         liveInit();
 
 });
@@ -316,6 +318,12 @@ function hubDetails(name, ser, live) {
   document.getElementById("popupHeading").innerHTML = name
 
   $('#offlineTable').DataTable().destroy();
+  $('#devonbatTable').DataTable().destroy();
+  $('#batopenTable').DataTable().destroy();
+  $('#batshortTable').DataTable().destroy();
+  $('#allDevTable').DataTable().destroy();
+
+
   document.getElementById("loader").style.display = "block";
 
 
@@ -342,6 +350,9 @@ $.ajax({
             }
             if ($('#batshortTableBody').html(feedback.battShort)) {
                 $('#batshortTable').DataTable();
+            }
+            if ($('#allDevTableBody').html(feedback.allDevices)) {
+                $('#allDevTable').DataTable();
             }
             resolve();
             document.getElementById("overlay").style.display = "block";

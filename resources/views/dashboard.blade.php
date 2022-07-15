@@ -187,7 +187,7 @@ p{
             <span>
                 <span style="font-size: 28px; font-weight: bold;">My Hubs | </span>
                 <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
-                <button type="button" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
+                <button type="button" onclick="liveInit();" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
                 <div class="search-container">
                     <form action="/search" method="get">
                         <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
@@ -200,7 +200,7 @@ p{
         <div class="row" id="allHubsDiv">
 
             @foreach ($hubs as $key => $hub)
-            <div class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', '{{$hub['api_response'] == false ? 'false' : 'true'}}');">
+            <div data-hubser="{{$key}}" class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', '{{$hub['api_response'] == false ? 'false' : 'true'}}');">
                 <div class="loader"></div>
                 
                 <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
@@ -211,7 +211,7 @@ p{
                 <p style="font-size: 13px">Devices Offline: {{isset($hub['off']) ? $hub['off'] : 0}}</p>
                 <p style="font-size: 13px">Devices Online: {{isset($hub['on']) ? $hub['on'] : 0}}</p>
 
-                <p style="font-size: 13px">Percent Offline: {{round($hub['percentOff'], 2)}}</p>
+                <p style="font-size: 13px">Percent Offline: {{$hub['percentOff']}}</p>
             </div> 
             @endforeach
 
@@ -246,8 +246,7 @@ $( document ).ready(function() {
 
 });
 function liveInit(){
-    var filter = 'Live';
-
+    var filter = 'LIVE';
     var list = document.getElementById("allHubsDiv");
     var divs = list.getElementsByTagName("div");
     for (var i = 0; i < divs.length; i++) {
@@ -256,6 +255,7 @@ function liveInit(){
         if (a) {
             if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
             divs[i].getElementsByTagName("div")[0].style.display = "block";
+            getHubInitDetails(divs[i].getAttribute('data-hubser'), divs[i].getElementsByTagName("div")[0], divs[i]);
             } else {
                 divs[i].getElementsByTagName("div")[0].style.display = "none";
             }
@@ -276,12 +276,41 @@ function myFunction(e) {
     if (a) {
       if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
         divs[i].style.display = "";
+
       } else {
         divs[i].style.display = "none";
       }
     }
   }
 
+}
+function getHubInitDetails(ser, loadContext, mainContext){
+    $.ajax({
+    url: '/hub/init',
+    type: 'post',
+    data: {
+        hubSer: ser,
+
+    },
+    success: feedback => {
+
+        const promise = new Promise((resolve, reject) => {
+            console.log(feedback);
+            mainContext.getElementsByTagName("p")[2].innerHTML = 'Total Devices: '+feedback.total;
+            mainContext.getElementsByTagName("p")[3].innerHTML = 'Devices Offline: '+feedback.off;
+            mainContext.getElementsByTagName("p")[4].innerHTML = 'Devices Online: '+feedback.on;
+            mainContext.getElementsByTagName("p")[5].innerHTML = 'Percent Offline: '+feedback.percentOff;
+
+            loadContext.style.display = "none";
+
+
+        });
+
+
+        //                        
+
+    }
+});
 }
 function hubDetails(name, ser, live) {
   document.getElementById("popupHeading").innerHTML = name

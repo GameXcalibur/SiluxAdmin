@@ -568,12 +568,12 @@ class HomeController extends Controller
                 $deviceStats[$hubForAccount->hubSerial]['active'] = $hubForAccount->hubIsActive;
 
 
-                $deviceStats[$hubForAccount->hubSerial]['off'] = 'LOADING...';
+                $deviceStats[$hubForAccount->hubSerial]['off'] = '-';
  
 
-                $deviceStats[$hubForAccount->hubSerial]['on'] = 'LOADING...';
+                $deviceStats[$hubForAccount->hubSerial]['on'] = '-';
 
-                $deviceStats[$hubForAccount->hubSerial]['total'] = 'LOADING...';
+                $deviceStats[$hubForAccount->hubSerial]['total'] = '-';
 
 
     
@@ -583,7 +583,7 @@ class HomeController extends Controller
                 $percentageOff = 0;
                 if(isset($deviceStats[$hubForAccount->hubSerial]['off']))   
                     $percentageOff = 100;
-                $deviceStats[$hubForAccount->hubSerial]['percentOff'] = 'LOADING...';
+                $deviceStats[$hubForAccount->hubSerial]['percentOff'] = '-';
                 $deviceStats[$hubForAccount->hubSerial]['status'] = 'Online';
                 $deviceStats[$hubForAccount->hubSerial]['statusH'] = '#3CBC3C';
 
@@ -597,6 +597,87 @@ class HomeController extends Controller
             'hubs' => $deviceStats
         ]);
 
+    }
+
+    public function hubOverviewInit(Request $request){
+        $data = $request->all();
+
+        $deviceStats = [];
+        $data1 = [];
+        $data1['api_key'] = 'abcd132453wq069n';
+        $data1['hubSerial'] = $data["hubSer"];
+        $data1['cmd'] = 'getDevices';
+        $data1['page'] = 1;
+
+
+        $totalHubDevices = [];
+        $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+        $hubResDevices = json_decode($hubResDevices, true);
+        array_push($totalHubDevices , ...$hubResDevices['live_response']);
+        while(count($hubResDevices['live_response']) == 8){
+            $data1['page']++;
+            $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+            $hubResDevices = json_decode($hubResDevices, true);
+            array_push($totalHubDevices , ...$hubResDevices['live_response']);
+
+        }
+        //dd($totalHubDevices);
+
+        $hubForAccount = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$data["hubSer"].'"')[0];
+        $deviceStats['on'] = 0;
+        $deviceStats['off'] = 0;
+
+        foreach($totalHubDevices as $totalHubDevice){
+
+            $deviceStats['api_response'] = true;
+            $deviceStats['active'] = $hubForAccount->hubIsActive;
+
+            $deviceStats[$totalHubDevice['serial']]['status'] = $totalHubDevice['state'];
+
+
+
+            switch($totalHubDevice['state']){
+                case '019':
+                case '010':
+                    if(isset($deviceStats['off']))
+                        $deviceStats['off']++;
+                    else
+                        $deviceStats['off'] = 1;
+                    break;
+                default:
+                    if(isset($deviceStats['on']))
+                        $deviceStats['on']++;
+                    else
+                        $deviceStats['on'] = 1;
+                    break;
+
+
+            }
+            if(isset($deviceStats['total']))
+                $deviceStats['total']++;
+            else
+                $deviceStats['total'] = 1;
+
+
+
+            $deviceStats['name'] = $hubForAccount->hubName;
+
+            
+            $percentageOff = 0;
+            if(isset($deviceStats['off']))   
+                $percentageOff = $deviceStats['off']/$deviceStats['total']*100;
+            $deviceStats['percentOff'] = $percentageOff;
+            $deviceStats['status'] = 'Online';
+            $deviceStats['statusH'] = '#3CBC3C';
+
+            if($percentageOff > 80){
+                $deviceStats['status'] = 'Offline';
+                $deviceStats['statusH'] = '#FF2828';
+            }
+        }
+        return response()->json($deviceStats);
+
+        
     }
 
     public function getDevices(Request $request){

@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::post('/devices', [App\Http\Controllers\HomeController::class, 'getDevices'])->name('devices.get')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
     Route::post('/hub/get', [App\Http\Controllers\HomeController::class, 'getHubInfo'])->name('hub.get')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+    Route::post('/hub/init', [App\Http\Controllers\HomeController::class, 'hubOverviewInit'])->name('hub.init')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+
 
 
     

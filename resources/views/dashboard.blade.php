@@ -3,6 +3,8 @@
 @section('content')
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
 p{
@@ -185,7 +187,7 @@ p{
     <div class="content-wrapper">
         <div class="row">
             <span>
-                <span style="font-size: 28px; font-weight: bold;">My Hubs | </span>
+                <span style="font-size: 28px; font-weight: bold;">Intellihubs | </span>
                 <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
                 <button type="button" onclick="liveInit();" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
                 <div class="search-container">
@@ -200,11 +202,11 @@ p{
         <div class="row" id="allHubsDiv">
 
             @foreach ($hubs as $key => $hub)
-            <div data-hubser="{{$key}}" class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', '{{$hub['api_response'] == false ? 'false' : 'true'}}');">
+            <div data-live="Loading" data-hubser="{{$key}}" class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', this);">
                 <div class="loader"></div>
                 
                 <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
-                <p style="font-size: 8px"><b>{{$hub['api_response'] == false ? 'Last Online Data - No Response From Hub' : 'Live Data'}}</b></p>
+                <p style="font-size: 8px"><b>Connecting..</b></p>
                 <hr>
                 
                 <p style="font-size: 13px">Total Devices: {{$hub['total']}}</p>
@@ -238,11 +240,6 @@ p{
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 <script>
 $( document ).ready(function() {
-        $('#offlineTable').DataTable();
-        $('#batshortTable').DataTable();
-        $('#devonbatTable').DataTable();
-        $('#batopenTable').DataTable();
-        $('#allDevTable').DataTable();
 
         liveInit();
 
@@ -255,12 +252,9 @@ function liveInit(){
         var a = divs[i].getElementsByTagName("p")[1];
 
         if (a) {
-            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
             divs[i].getElementsByTagName("div")[0].style.display = "block";
             getHubInitDetails(divs[i].getAttribute('data-hubser'), divs[i].getElementsByTagName("div")[0], divs[i]);
-            } else {
-                divs[i].getElementsByTagName("div")[0].style.display = "none";
-            }
+
         }
     }
 }
@@ -298,10 +292,19 @@ function getHubInitDetails(ser, loadContext, mainContext){
 
         const promise = new Promise((resolve, reject) => {
             console.log(feedback);
+            if(feedback.status == "Online"){
+                mainContext.getElementsByTagName("p")[1].innerHTML = '<b>Live Data</b>';
+
+            }else{
+                mainContext.getElementsByTagName("p")[1].innerHTML = '<b>Last Online Data - No Response From Hub</b>';
+
+            }
+            mainContext.style.background = feedback.statusH;
             mainContext.getElementsByTagName("p")[2].innerHTML = 'Total Devices: '+feedback.total;
             mainContext.getElementsByTagName("p")[3].innerHTML = 'Devices Offline: '+feedback.off;
             mainContext.getElementsByTagName("p")[4].innerHTML = 'Devices Online: '+feedback.on;
             mainContext.getElementsByTagName("p")[5].innerHTML = 'Percent Offline: '+feedback.percentOff;
+            mainContext.setAttribute('data-live', feedback.api_response);
 
             loadContext.style.display = "none";
 
@@ -314,8 +317,14 @@ function getHubInitDetails(ser, loadContext, mainContext){
     }
 });
 }
-function hubDetails(name, ser, live) {
-  document.getElementById("popupHeading").innerHTML = name
+$('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e){
+      $($.fn.dataTable.tables(true)).DataTable()
+         .scroller.measure();
+   });  
+function hubDetails(name, ser, context) {
+  document.getElementById("popupHeading").innerHTML = name;
+
+  var live = context.getAttribute('data-live');
 
   $('#offlineTable').DataTable().destroy();
   $('#devonbatTable').DataTable().destroy();
@@ -351,8 +360,19 @@ $.ajax({
             if ($('#batshortTableBody').html(feedback.battShort)) {
                 $('#batshortTable').DataTable();
             }
+
+
             if ($('#allDevTableBody').html(feedback.allDevices)) {
-                $('#allDevTable').DataTable();
+                setTimeout(function() {
+                    var allDevTable = $('#allDevTable').DataTable({
+                    scrollY: '50vh',
+                    scrollCollapse: true,
+                });
+                }, 200);
+
+
+
+                
             }
             resolve();
             document.getElementById("overlay").style.display = "block";

@@ -111,10 +111,7 @@ class HomeController extends Controller
                 $allDevices .= $totalHubDevice['serial'];
                 $allDevices .= '</td>';
     
-    
-                $allDevices .= '<td>';
-                $allDevices .= $data["hubSer"];
-                $allDevices .= '</td>';
+
     
     
                 if(!$deviceObj){
@@ -590,118 +587,31 @@ class HomeController extends Controller
         $deviceStats = [];
         foreach($hubsForAccount as $hubForAccount){
 
-            $data = [];
-            $data['api_key'] = 'abcd132453wq069n';
-            $data['hubSerial'] = $hubForAccount->hubSerial;
-            $data['cmd'] = 'hubInfo';
+
+            $deviceStats[$hubForAccount->hubSerial]['api_response'] = FALSE;     
+
+            $deviceStats[$hubForAccount->hubSerial]['active'] = $hubForAccount->hubIsActive;
 
 
-            $hubRes = $this->api("POST", "156.38.138.34/api/api_pass.php", $data);
-            if(str_contains($hubRes, "IntelliHub not responding")){
-                $lastOnlineDevs = \DB::select('SELECT * FROM lastOnline WHERE hubSerial ="'.$hubForAccount->hubSerial.'"');
-                if(count($lastOnlineDevs) < 1){
-                    $deviceStats[$hubForAccount->hubSerial]['api_response'] = false;     
-                    $deviceStats[$hubForAccount->hubSerial]['active'] = $hubForAccount->hubIsActive;
+            $deviceStats[$hubForAccount->hubSerial]['off'] = '-';
 
 
-                    $deviceStats[$hubForAccount->hubSerial]['off'] = 0;
-     
+            $deviceStats[$hubForAccount->hubSerial]['on'] = '-';
 
-                    $deviceStats[$hubForAccount->hubSerial]['on'] = 0;
-
-                    $deviceStats[$hubForAccount->hubSerial]['total'] = 0;
+            $deviceStats[$hubForAccount->hubSerial]['total'] = '-';
 
 
-        
-                    $deviceStats[$hubForAccount->hubSerial]['name'] = $hubForAccount->hubName;
-        
-                    
-                    $percentageOff = 0;
-                    if(isset($deviceStats[$hubForAccount->hubSerial]['off']))   
-                        $percentageOff = 100;
-                    $deviceStats[$hubForAccount->hubSerial]['percentOff'] = $percentageOff;
-                    $deviceStats[$hubForAccount->hubSerial]['status'] = 'Online';
-                    $deviceStats[$hubForAccount->hubSerial]['statusH'] = '#ccc';
-        
-                    if($percentageOff > 80){
-                        $deviceStats[$hubForAccount->hubSerial]['status'] = 'Offline';
-                        $deviceStats[$hubForAccount->hubSerial]['statusH'] = '#aaa';
-        
-                    }
-                }
-                foreach($lastOnlineDevs as $lastOnlineDev){
-        
-                    $deviceStats[$lastOnlineDev->hubSerial]['api_response'] = false;
-                    $deviceStats[$lastOnlineDev->hubSerial]['active'] = $hubForAccount->hubIsActive;
 
-                    $deviceStats[$lastOnlineDev->hubSerial][$lastOnlineDev->serial]['status'] = $lastOnlineDev->extra;
-        
-        
-                    switch($lastOnlineDev->extra){
-                        case 'Offline':
-                            if(isset($deviceStats[$lastOnlineDev->hubSerial]['off']))
-                                $deviceStats[$lastOnlineDev->hubSerial]['off']++;
-                            else
-                                $deviceStats[$lastOnlineDev->hubSerial]['off'] = 1;
-                            break;
-                        case 'Online':
-                            if(isset($deviceStats[$lastOnlineDev->hubSerial]['on']))
-                                $deviceStats[$lastOnlineDev->hubSerial]['on']++;
-                            else
-                                $deviceStats[$lastOnlineDev->hubSerial]['on'] = 1;
-                            break;
-                    }
-                    if(isset($deviceStats[$lastOnlineDev->hubSerial]['total']))
-                        $deviceStats[$lastOnlineDev->hubSerial]['total']++;
-                    else
-                        $deviceStats[$lastOnlineDev->hubSerial]['total'] = 1;
+            $deviceStats[$hubForAccount->hubSerial]['name'] = $hubForAccount->hubName;
 
+            
+            $percentageOff = 0;
+            if(isset($deviceStats[$hubForAccount->hubSerial]['off']))   
+                $percentageOff = 100;
+            $deviceStats[$hubForAccount->hubSerial]['percentOff'] = '-';
+            $deviceStats[$hubForAccount->hubSerial]['status'] = 'Connecting..';
+            $deviceStats[$hubForAccount->hubSerial]['statusH'] = '#aaa';
 
-        
-                    $deviceStats[$lastOnlineDev->hubSerial]['name'] = $hubForAccount->hubName;
-        
-                    
-                    $percentageOff = 0;
-                    if(isset($deviceStats[$lastOnlineDev->hubSerial]['off']))   
-                        $percentageOff = $deviceStats[$lastOnlineDev->hubSerial]['off']/$deviceStats[$lastOnlineDev->hubSerial]['total']*100;
-                    $deviceStats[$lastOnlineDev->hubSerial]['percentOff'] = $percentageOff;
-                    $deviceStats[$lastOnlineDev->hubSerial]['status'] = 'Online';
-                    $deviceStats[$lastOnlineDev->hubSerial]['statusH'] = '#ccc';
-        
-                    if($percentageOff > 80){
-                        $deviceStats[$lastOnlineDev->hubSerial]['status'] = 'Offline';
-                        $deviceStats[$lastOnlineDev->hubSerial]['statusH'] = '#aaa';
-        
-                    }
-        
-                        
-                }
-            }else{
-                $data1 = [];
-                $deviceStats[$hubForAccount->hubSerial]['api_response'] = TRUE;     
-                $deviceStats[$hubForAccount->hubSerial]['active'] = $hubForAccount->hubIsActive;
-
-
-                $deviceStats[$hubForAccount->hubSerial]['off'] = '-';
- 
-
-                $deviceStats[$hubForAccount->hubSerial]['on'] = '-';
-
-                $deviceStats[$hubForAccount->hubSerial]['total'] = '-';
-
-
-    
-                $deviceStats[$hubForAccount->hubSerial]['name'] = $hubForAccount->hubName;
-    
-                
-                $percentageOff = 0;
-                if(isset($deviceStats[$hubForAccount->hubSerial]['off']))   
-                    $percentageOff = 100;
-                $deviceStats[$hubForAccount->hubSerial]['percentOff'] = '-';
-                $deviceStats[$hubForAccount->hubSerial]['status'] = 'Online';
-                $deviceStats[$hubForAccount->hubSerial]['statusH'] = '#3CBC3C';
-
-            }
 
 
                 
@@ -726,69 +636,155 @@ class HomeController extends Controller
 
         $totalHubDevices = [];
         $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
-        $hubResDevices = json_decode($hubResDevices, true);
-        array_push($totalHubDevices , ...$hubResDevices['live_response']);
-        while(count($hubResDevices['live_response']) == 8){
-            $data1['page']++;
-            $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+        if(str_contains($hubResDevices, "IntelliHub not responding")){
+            $hubForAccount = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$data["hubSer"].'"')[0];
+            $deviceStats['on'] = 0;
+            $deviceStats['off'] = 0;
+            $lastOnlineDevs = \DB::select('SELECT * FROM lastOnline WHERE hubSerial ="'.$hubForAccount->hubSerial.'"');
+            if(count($lastOnlineDevs) < 1){
+                $deviceStats['api_response'] = false;     
+                $deviceStats['active'] = $hubForAccount->hubIsActive;
+
+
+                $deviceStats['off'] = 0;
+ 
+
+                $deviceStats['on'] = 0;
+
+                $deviceStats['total'] = 0;
+
+
+    
+                $deviceStats['name'] = $hubForAccount->hubName;
+    
+                
+                $percentageOff = 0;
+                if(isset($deviceStats['off']))   
+                    $percentageOff = 100;
+                $deviceStats['percentOff'] = $percentageOff;
+                $deviceStats['status'] = 'Online';
+                $deviceStats['statusH'] = '#ccc';
+    
+                if($percentageOff > 80){
+                    $deviceStats['status'] = 'Offline';
+                    $deviceStats['statusH'] = '#aaa';
+    
+                }
+            }
+            foreach($lastOnlineDevs as $lastOnlineDev){
+    
+                $deviceStats['api_response'] = false;
+                $deviceStats['active'] = $hubForAccount->hubIsActive;
+
+                $deviceStats[$lastOnlineDev->serial]['status'] = $lastOnlineDev->extra;
+    
+    
+                switch($lastOnlineDev->extra){
+                    case 'Offline':
+                        if(isset($deviceStats['off']))
+                            $deviceStats['off']++;
+                        else
+                            $deviceStats['off'] = 1;
+                        break;
+                    case 'Online':
+                        if(isset($deviceStats['on']))
+                            $deviceStats['on']++;
+                        else
+                            $deviceStats['on'] = 1;
+                        break;
+                }
+                if(isset($deviceStats['total']))
+                    $deviceStats['total']++;
+                else
+                    $deviceStats['total'] = 1;
+
+
+    
+                $deviceStats['name'] = $hubForAccount->hubName;
+    
+                
+                $percentageOff = 0;
+                if(isset($deviceStats['off']))   
+                    $percentageOff = $deviceStats['off']/$deviceStats['total']*100;
+                $deviceStats['percentOff'] = $percentageOff;
+                $deviceStats['status'] = 'Online';
+                $deviceStats['statusH'] = '#ccc';
+    
+                if($percentageOff > 80){
+                    $deviceStats['status'] = 'Offline';
+                    $deviceStats['statusH'] = '#aaa';
+    
+                }
+    
+                    
+            }
+        }else{
             $hubResDevices = json_decode($hubResDevices, true);
             array_push($totalHubDevices , ...$hubResDevices['live_response']);
-
-        }
-        //dd($totalHubDevices);
-
-        $hubForAccount = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$data["hubSer"].'"')[0];
-        $deviceStats['on'] = 0;
-        $deviceStats['off'] = 0;
-
-        foreach($totalHubDevices as $totalHubDevice){
-
-            $deviceStats['api_response'] = true;
-            $deviceStats['active'] = $hubForAccount->hubIsActive;
-
-            $deviceStats[$totalHubDevice['serial']]['status'] = $totalHubDevice['state'];
-
-
-
-            switch($totalHubDevice['state']){
-                case '019':
-                case '010':
-                    if(isset($deviceStats['off']))
-                        $deviceStats['off']++;
-                    else
-                        $deviceStats['off'] = 1;
-                    break;
-                default:
-                    if(isset($deviceStats['on']))
-                        $deviceStats['on']++;
-                    else
-                        $deviceStats['on'] = 1;
-                    break;
-
-
+            while(count($hubResDevices['live_response']) == 8){
+                $data1['page']++;
+                $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+                $hubResDevices = json_decode($hubResDevices, true);
+                array_push($totalHubDevices , ...$hubResDevices['live_response']);
+    
             }
-            if(isset($deviceStats['total']))
-                $deviceStats['total']++;
-            else
-                $deviceStats['total'] = 1;
-
-
-
-            $deviceStats['name'] = $hubForAccount->hubName;
-
-            
-            $percentageOff = 0;
-            if(isset($deviceStats['off']))   
-                $percentageOff = $deviceStats['off']/$deviceStats['total']*100;
-            $deviceStats['percentOff'] = $percentageOff;
-            $deviceStats['status'] = 'Online';
-            $deviceStats['statusH'] = '#3CBC3C';
-
-            if($percentageOff > 80){
-                $deviceStats['status'] = 'Offline';
-                $deviceStats['statusH'] = '#FF2828';
+            //dd($totalHubDevices);
+    
+            $hubForAccount = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$data["hubSer"].'"')[0];
+            $deviceStats['on'] = 0;
+            $deviceStats['off'] = 0;
+    
+            foreach($totalHubDevices as $totalHubDevice){
+    
+                $deviceStats['api_response'] = true;
+                $deviceStats['active'] = $hubForAccount->hubIsActive;
+    
+                $deviceStats[$totalHubDevice['serial']]['status'] = $totalHubDevice['state'];
+    
+    
+    
+                switch($totalHubDevice['state']){
+                    case '019':
+                    case '010':
+                        if(isset($deviceStats['off']))
+                            $deviceStats['off']++;
+                        else
+                            $deviceStats['off'] = 1;
+                        break;
+                    default:
+                        if(isset($deviceStats['on']))
+                            $deviceStats['on']++;
+                        else
+                            $deviceStats['on'] = 1;
+                        break;
+    
+    
+                }
+                if(isset($deviceStats['total']))
+                    $deviceStats['total']++;
+                else
+                    $deviceStats['total'] = 1;
+    
+    
+    
+                $deviceStats['name'] = $hubForAccount->hubName;
+    
+                
+                $percentageOff = 0;
+                if(isset($deviceStats['off']))   
+                    $percentageOff = $deviceStats['off']/$deviceStats['total']*100;
+                $deviceStats['percentOff'] = $percentageOff;
+                $deviceStats['status'] = 'Online';
+                $deviceStats['statusH'] = '#3CBC3C';
+    
+                if($percentageOff > 80){
+                    $deviceStats['status'] = 'Offline';
+                    $deviceStats['statusH'] = '#FF2828';
+                }
             }
         }
+
+
         return response()->json($deviceStats);
 
         

@@ -125,7 +125,13 @@ class HomeController extends Controller
                     $allDevices .= '</td>';
                 }
     
-    
+                $allDevices .= '<td class="td-actions text-right">';
+                if($deviceType[0]->name == 'EMERGENCY_LIGHT')
+                    $allDevices .= '<a rel="tooltip" class="btn btn-info btn-link"  data-original-title="" onclick="viewSchedule(\''.$data["hubSer"].'\', \''.$totalHubDevice['serial'].'\');" title=""><i class="material-icons">schedule</i><div class="ripple-container"></div></a>';
+
+                $allDevices .= '<a rel="tooltip" class="btn btn-danger btn-link"  data-original-title="" onclick="deleteDevice(\''.$data["hubSer"].'\', \''.$totalHubDevice['serial'].'\');" title=""><i class="material-icons">delete</i><div class="ripple-container"></div></a>';
+
+                $allDevices .= '</td>';
     
                 $allDevices .= '</tr>';
 
@@ -620,6 +626,48 @@ class HomeController extends Controller
         return view('dashboard', [
             'hubs' => $deviceStats
         ]);
+
+    }
+
+    public function getSchedule(Request $request){
+        $data = $request->all();
+        $returnObj = [];
+        $data1 = [];
+        $data1['api_key'] = 'abcd132453wq069n';
+        $data1['hubSerial'] = $data["hub"];
+        $data1['devSerial'] = $data["device"];
+
+        $data1['cmd'] = 'getProEMSchedules';
+        $data1['index'] = 1;
+
+        $allSchedules = [];
+        $hubResSchedules = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+        if(str_contains($hubResSchedules, "IntelliHub not responding")){
+            $returnObj['status'] = FALSE;
+        }else{
+
+            $returnObj['status'] = TRUE;
+            $returnObj['data'] = json_decode($hubResSchedules, true);
+            $returnObj['dataSent'] = $data1;
+
+            $data1 = [];
+            $data1['api_key'] = 'abcd132453wq069n';
+            $data1['hubSerial'] = $data["hub"];
+            $data1['devSerial'] = $data["device"];
+    
+            $data1['cmd'] = 'getResponse';
+            $data1['responseForCmdType'] = 'getProEMSchedules';
+            usleep(10000);
+            $hubResSchedulesResponse = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+
+            $returnObj['dataRes'] = json_decode($hubResSchedulesResponse, true);
+
+
+
+
+        }
+
+        return response()->json($returnObj);
 
     }
 

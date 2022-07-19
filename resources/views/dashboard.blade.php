@@ -6,6 +6,8 @@
 <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.min.css">
+
 <style>
 p{
     padding: 0;
@@ -142,6 +144,10 @@ p{
 			from{ bottom:-100px; opacity:0 } 
 			to{ bottom:0; opacity:1 }
 			}
+
+            .swal2-popup{
+    width:60vmax !important;
+}
 </style>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
@@ -149,6 +155,8 @@ p{
             <h1 id="popupHeading" style="margin-top: 20px; text-decoration: underline;">HUB NAME</h1>
         </div>
         <div class="row justify-content-center">
+            <div class="loader" id="overlayLoader"></div>
+
             <div class="col-md-11">
                 <ul class="nav nav-tabs" id="myTab" role="tablist" style="background: #717073">
                     <li class="nav-item" role="presentation">
@@ -238,12 +246,62 @@ p{
 <script src="{{ asset('js1') }}/main.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-$( document ).ready(function() {
 
+
+$( document ).ready(function() {
+    $(".toggle-btn").click(function(){
+        $("#myCollapsible").collapse('toggle');
+    });
         liveInit();
 
 });
+function viewSchedule(hub, device){
+
+    document.getElementById("overlayLoader").style.display = "block";
+
+    $.ajax({
+        url: '/hub/schedule/get',
+        type: 'post',
+        data: {
+            hub: hub,
+            device: device,
+
+
+        },
+        success: feedback => {
+
+            const promise = new Promise((resolve, reject) => {
+                console.log(feedback);
+
+
+                document.getElementById("overlayLoader").style.display = "none";
+                Swal.fire({
+                    title: 'ProEM Self Test Schedule',
+                    html: 'DEBUG<br><p>'+JSON.stringify(feedback)+'</p><br>DEBUG<br><input type="button" class="btn btn-primary btn-lg btn-block" value="Weekly" onclick="$(\'#myCollapsible\').collapse(\'toggle\');"><div id="myCollapsible" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Monthly" onclick="$(\'#myCollapsible1\').collapse(\'toggle\');"><div id="myCollapsible1" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Bi Annually" onclick="$(\'#myCollapsible2\').collapse(\'toggle\');"><div id="myCollapsible2" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Annually" onclick="$(\'#myCollapsible3\').collapse(\'toggle\');"><div id="myCollapsible3" class="collapse hide"><p>No Schedules</p></div>',
+                    showDenyButton: true,
+                    showCancelButton: true,
+                    confirmButtonText: 'Save',
+                    denyButtonText: `Don't save`,
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        Swal.fire('Saved!', '', 'success')
+                    } else if (result.isDenied) {
+                        Swal.fire('Changes are not saved', '', 'info')
+                    }
+                })
+
+            });
+
+
+            //                        
+
+        }
+    });
+}
 function liveInit(){
     var filter = 'LIVE';
     var list = document.getElementById("allHubsDiv");

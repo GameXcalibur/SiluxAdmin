@@ -79,9 +79,9 @@ th {
   #loading img {
     max-width: 250px; }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.current,
-.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+.datables43_wrapper .datables43_paginate .paginate_button.current,
+.datables43_wrapper .datables43_paginate .paginate_button.current:hover,
+.datables43_wrapper .datables43_paginate .paginate_button:hover {
   border: 1px solid #068300 !important;
   background-color: #068300 !important;
   background: #068300 !important;

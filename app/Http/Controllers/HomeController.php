@@ -44,6 +44,22 @@ class HomeController extends Controller
 
     }
 
+    public function deleteDevice(Request $request){
+        $data = $request->all();
+        $returnObj = [];
+        $returnObj['live'] = false;
+        $data1 = [];
+        $data1['api_key'] = 'abcd132453wq069n';
+        $data1['hubSerial'] = $data["hub"];
+        $data1['cmd'] = 'getDevices';
+        $data1['page'] = 1;
+
+        $hubResDevices = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+        return response()->json($returnObj);
+
+
+    }
+
 
 
     public function getHubInfo(Request $request){

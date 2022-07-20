@@ -11507,7 +11507,7 @@ pre code {
 
 .form-control,
 .asColorPicker-input,
-.dataTables_wrapper select,
+.datables43_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
@@ -11535,7 +11535,7 @@ pre code {
 
     .form-control,
     .asColorPicker-input,
-    .dataTables_wrapper select,
+    .datables43_wrapper select,
     .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
     .jsgrid .jsgrid-table .jsgrid-filter-row select,
     .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
@@ -11550,7 +11550,7 @@ pre code {
 
 .form-control::-ms-expand,
 .asColorPicker-input::-ms-expand,
-.dataTables_wrapper select::-ms-expand,
+.datables43_wrapper select::-ms-expand,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-ms-expand,
 .jsgrid .jsgrid-table .jsgrid-filter-row select::-ms-expand,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::-ms-expand,
@@ -11565,7 +11565,7 @@ pre code {
 
 .form-control:-moz-focusring,
 .asColorPicker-input:-moz-focusring,
-.dataTables_wrapper select:-moz-focusring,
+.datables43_wrapper select:-moz-focusring,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-focusring[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-focusring,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-focusring[type=number],
@@ -11580,7 +11580,7 @@ pre code {
 
 .form-control:focus,
 .asColorPicker-input:focus,
-.dataTables_wrapper select:focus,
+.datables43_wrapper select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number],
@@ -11598,7 +11598,7 @@ pre code {
 
 .form-control::placeholder,
 .asColorPicker-input::placeholder,
-.dataTables_wrapper select::placeholder,
+.datables43_wrapper select::placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row select::placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]::placeholder,
@@ -11613,7 +11613,7 @@ pre code {
 
 .form-control:disabled,
 .asColorPicker-input:disabled,
-.dataTables_wrapper select:disabled,
+.datables43_wrapper select:disabled,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:disabled[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:disabled,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:disabled[type=number],
@@ -11624,7 +11624,7 @@ pre code {
 .typeahead:disabled,
 .form-control[readonly],
 .asColorPicker-input[readonly],
-.dataTables_wrapper select[readonly],
+.datables43_wrapper select[readonly],
 .jsgrid .jsgrid-table .jsgrid-filter-row input[readonly][type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select[readonly],
 .jsgrid .jsgrid-table .jsgrid-filter-row input[readonly][type=number],
@@ -11678,7 +11678,7 @@ input.typeahead[type="month"] {
 
 select.form-control:focus::-ms-value,
 select.asColorPicker-input:focus::-ms-value,
-.dataTables_wrapper select:focus::-ms-value,
+.datables43_wrapper select:focus::-ms-value,
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus::-ms-value,
 .select2-container--default select.select2-selection--single:focus::-ms-value,
 .select2-container--default .select2-selection--single select.select2-search__field:focus::-ms-value,
@@ -11754,7 +11754,7 @@ select.typeahead:focus::-ms-value {
 
 select.form-control[size],
 select.asColorPicker-input[size],
-.dataTables_wrapper select[size],
+.datables43_wrapper select[size],
 .jsgrid .jsgrid-table .jsgrid-filter-row select[size],
 .select2-container--default select.select2-selection--single[size],
 .select2-container--default .select2-selection--single select.select2-search__field[size],
@@ -11763,7 +11763,7 @@ select.tt-query[size],
 select.typeahead[size],
 select.form-control[multiple],
 select.asColorPicker-input[multiple],
-.dataTables_wrapper select[multiple],
+.datables43_wrapper select[multiple],
 .jsgrid .jsgrid-table .jsgrid-filter-row select[multiple],
 .select2-container--default select.select2-selection--single[multiple],
 .select2-container--default .select2-selection--single select.select2-search__field[multiple],
@@ -11872,8 +11872,8 @@ textarea.typeahead {
 
 .was-validated .form-control:valid,
 .was-validated .asColorPicker-input:valid,
-.was-validated .dataTables_wrapper select:valid,
-.dataTables_wrapper .was-validated select:valid,
+.was-validated .datables43_wrapper select:valid,
+.datables43_wrapper .was-validated select:valid,
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row input:valid[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .was-validated input:valid[type=text],
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row select:valid,
@@ -11889,7 +11889,7 @@ textarea.typeahead {
 .was-validated .typeahead:valid,
 .form-control.is-valid,
 .is-valid.asColorPicker-input,
-.dataTables_wrapper select.is-valid,
+.datables43_wrapper select.is-valid,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-valid[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.is-valid,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-valid[type=number],
@@ -11908,8 +11908,8 @@ textarea.typeahead {
 
 .was-validated .form-control:valid:focus,
 .was-validated .asColorPicker-input:valid:focus,
-.was-validated .dataTables_wrapper select:valid:focus,
-.dataTables_wrapper .was-validated select:valid:focus,
+.was-validated .datables43_wrapper select:valid:focus,
+.datables43_wrapper .was-validated select:valid:focus,
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row input:valid:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .was-validated input:valid:focus[type=text],
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row select:valid:focus,
@@ -11925,7 +11925,7 @@ textarea.typeahead {
 .was-validated .typeahead:valid:focus,
 .form-control.is-valid:focus,
 .is-valid.asColorPicker-input:focus,
-.dataTables_wrapper select.is-valid:focus,
+.datables43_wrapper select.is-valid:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-valid:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.is-valid:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-valid:focus[type=number],
@@ -12052,8 +12052,8 @@ textarea.is-valid.typeahead {
 
 .was-validated .form-control:invalid,
 .was-validated .asColorPicker-input:invalid,
-.was-validated .dataTables_wrapper select:invalid,
-.dataTables_wrapper .was-validated select:invalid,
+.was-validated .datables43_wrapper select:invalid,
+.datables43_wrapper .was-validated select:invalid,
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row input:invalid[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .was-validated input:invalid[type=text],
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row select:invalid,
@@ -12069,7 +12069,7 @@ textarea.is-valid.typeahead {
 .was-validated .typeahead:invalid,
 .form-control.is-invalid,
 .is-invalid.asColorPicker-input,
-.dataTables_wrapper select.is-invalid,
+.datables43_wrapper select.is-invalid,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-invalid[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.is-invalid,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-invalid[type=number],
@@ -12088,8 +12088,8 @@ textarea.is-valid.typeahead {
 
 .was-validated .form-control:invalid:focus,
 .was-validated .asColorPicker-input:invalid:focus,
-.was-validated .dataTables_wrapper select:invalid:focus,
-.dataTables_wrapper .was-validated select:invalid:focus,
+.was-validated .datables43_wrapper select:invalid:focus,
+.datables43_wrapper .was-validated select:invalid:focus,
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row input:invalid:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .was-validated input:invalid:focus[type=text],
 .was-validated .jsgrid .jsgrid-table .jsgrid-filter-row select:invalid:focus,
@@ -12105,7 +12105,7 @@ textarea.is-valid.typeahead {
 .was-validated .typeahead:invalid:focus,
 .form-control.is-invalid:focus,
 .is-invalid.asColorPicker-input:focus,
-.dataTables_wrapper select.is-invalid:focus,
+.datables43_wrapper select.is-invalid:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-invalid:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.is-invalid:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.is-invalid:focus[type=number],
@@ -12228,8 +12228,8 @@ textarea.is-invalid.typeahead {
 
     .form-inline .form-control,
     .form-inline .asColorPicker-input,
-    .form-inline .dataTables_wrapper select,
-    .dataTables_wrapper .form-inline select,
+    .form-inline .datables43_wrapper select,
+    .datables43_wrapper .form-inline select,
     .form-inline .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
     .jsgrid .jsgrid-table .jsgrid-filter-row .form-inline input[type=text],
     .form-inline .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -12286,9 +12286,9 @@ textarea.is-invalid.typeahead {
 
 .btn,
 .ajax-upload-dragdrop .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel,
+.swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel,
 .wizard > .actions a {
     display: inline-block;
     font-weight: 400;
@@ -12309,9 +12309,9 @@ textarea.is-invalid.typeahead {
 
     .btn,
     .ajax-upload-dragdrop .ajax-file-upload,
-    .swal2-modal .swal2-buttonswrapper .swal2-styled,
-    .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm,
-    .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel,
+    .swal32-modal .swal32-buttonswrapper .swal32-styled,
+    .swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm,
+    .swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel,
     .wizard > .actions a {
         transition: none;
     }
@@ -12319,7 +12319,7 @@ textarea.is-invalid.typeahead {
 
 .btn:hover,
 .ajax-upload-dragdrop .ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:hover,
 .wizard > .actions a:hover {
     color: #212529;
     text-decoration: none;
@@ -12327,11 +12327,11 @@ textarea.is-invalid.typeahead {
 
 .btn:focus,
 .ajax-upload-dragdrop .ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
 .wizard > .actions a:focus,
 .btn.focus,
 .ajax-upload-dragdrop .focus.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .focus.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .focus.swal32-styled,
 .wizard > .actions a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -12339,31 +12339,31 @@ textarea.is-invalid.typeahead {
 
 .btn.disabled,
 .ajax-upload-dragdrop .disabled.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .disabled.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .disabled.swal32-styled,
 .wizard > .actions a.disabled,
 .btn:disabled,
 .ajax-upload-dragdrop .ajax-file-upload:disabled,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:disabled,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:disabled,
 .wizard > .actions a:disabled {
     opacity: 0.65;
 }
 
 .btn:not(:disabled):not(.disabled),
 .ajax-upload-dragdrop .ajax-file-upload:not(:disabled):not(.disabled),
-.swal2-modal .swal2-buttonswrapper .swal2-styled:not(:disabled):not(.disabled),
+.swal32-modal .swal32-buttonswrapper .swal32-styled:not(:disabled):not(.disabled),
 .wizard > .actions a:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
 
 a.btn.disabled,
 .ajax-upload-dragdrop a.disabled.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper a.disabled.swal2-styled,
+.swal32-modal .swal32-buttonswrapper a.disabled.swal32-styled,
 .wizard > .actions a.disabled,
 fieldset:disabled a.btn,
 fieldset:disabled .ajax-upload-dragdrop a.ajax-file-upload,
 .ajax-upload-dragdrop fieldset:disabled a.ajax-file-upload,
-fieldset:disabled .swal2-modal .swal2-buttonswrapper a.swal2-styled,
-.swal2-modal .swal2-buttonswrapper fieldset:disabled a.swal2-styled,
+fieldset:disabled .swal32-modal .swal32-buttonswrapper a.swal32-styled,
+.swal32-modal .swal32-buttonswrapper fieldset:disabled a.swal32-styled,
 fieldset:disabled .wizard > .actions a,
 .wizard > .actions fieldset:disabled a {
     pointer-events: none;
@@ -13058,7 +13058,7 @@ fieldset:disabled .wizard > .actions a,
 .btn-lg,
 .btn-group-lg > .btn,
 .ajax-upload-dragdrop .btn-group-lg > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-lg > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-lg > .swal32-styled,
 .wizard > .actions .btn-group-lg > a {
     padding: 0.94rem 1.94rem;
     font-size: 0.875rem;
@@ -13069,7 +13069,7 @@ fieldset:disabled .wizard > .actions a,
 .btn-sm,
 .btn-group-sm > .btn,
 .ajax-upload-dragdrop .btn-group-sm > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-sm > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-sm > .swal32-styled,
 .wizard > .actions .btn-group-sm > a {
     padding: 0.5rem 0.81rem;
     font-size: 0.875rem;
@@ -13390,11 +13390,11 @@ input[type="button"].btn-block {
 
 .btn-group > .btn,
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled,
 .wizard > .actions .btn-group > a,
 .btn-group-vertical > .btn,
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled,
 .wizard > .actions .btn-group-vertical > a {
     position: relative;
     flex: 1 1 auto;
@@ -13402,38 +13402,38 @@ input[type="button"].btn-block {
 
 .btn-group > .btn:hover,
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:hover,
 .wizard > .actions .btn-group > a:hover,
 .btn-group-vertical > .btn:hover,
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:hover,
 .wizard > .actions .btn-group-vertical > a:hover {
     z-index: 1;
 }
 
 .btn-group > .btn:focus,
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:focus,
 .wizard > .actions .btn-group > a:focus,
 .btn-group > .btn:active,
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:active,
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:active,
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:active,
 .wizard > .actions .btn-group > a:active,
 .btn-group > .btn.active,
 .ajax-upload-dragdrop .btn-group > .active.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group > .active.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group > .active.swal32-styled,
 .wizard > .actions .btn-group > a.active,
 .btn-group-vertical > .btn:focus,
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:focus,
 .wizard > .actions .btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:active,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:active,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:active,
 .wizard > .actions .btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
 .ajax-upload-dragdrop .btn-group-vertical > .active.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .active.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .active.swal32-styled,
 .wizard > .actions .btn-group-vertical > a.active {
     z-index: 1;
 }
@@ -13451,7 +13451,7 @@ input[type="button"].btn-block {
 
 .btn-group > .btn:not(:first-child),
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:not(:first-child),
 .wizard > .actions .btn-group > a:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
     margin-left: -1px;
@@ -13459,11 +13459,11 @@ input[type="button"].btn-block {
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:not(:last-child):not(.dropdown-toggle),
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:not(:last-child):not(.dropdown-toggle),
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:not(:last-child):not(.dropdown-toggle),
 .wizard > .actions .btn-group > a:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .ajax-upload-dragdrop .btn-group > .btn-group:not(:last-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group > .btn-group:not(:last-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group > .btn-group:not(:last-child) > .swal32-styled,
 .wizard > .actions .btn-group > .btn-group:not(:last-child) > a {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -13471,11 +13471,11 @@ input[type="button"].btn-block {
 
 .btn-group > .btn:not(:first-child),
 .ajax-upload-dragdrop .btn-group > .ajax-file-upload:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .btn-group > .swal2-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .btn-group > .swal32-styled:not(:first-child),
 .wizard > .actions .btn-group > a:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .ajax-upload-dragdrop .btn-group > .btn-group:not(:first-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group > .btn-group:not(:first-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group > .btn-group:not(:first-child) > .swal32-styled,
 .wizard > .actions .btn-group > .btn-group:not(:first-child) > a {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -13499,7 +13499,7 @@ input[type="button"].btn-block {
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
 .ajax-upload-dragdrop .btn-group-sm > .ajax-file-upload + .dropdown-toggle-split,
-.swal2-modal .swal2-buttonswrapper .btn-group-sm > .swal2-styled + .dropdown-toggle-split,
+.swal32-modal .swal32-buttonswrapper .btn-group-sm > .swal32-styled + .dropdown-toggle-split,
 .wizard > .actions .btn-group-sm > a + .dropdown-toggle-split {
     padding-right: 0.6075rem;
     padding-left: 0.6075rem;
@@ -13508,7 +13508,7 @@ input[type="button"].btn-block {
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
 .ajax-upload-dragdrop .btn-group-lg > .ajax-file-upload + .dropdown-toggle-split,
-.swal2-modal .swal2-buttonswrapper .btn-group-lg > .swal2-styled + .dropdown-toggle-split,
+.swal32-modal .swal32-buttonswrapper .btn-group-lg > .swal32-styled + .dropdown-toggle-split,
 .wizard > .actions .btn-group-lg > a + .dropdown-toggle-split {
     padding-right: 1.455rem;
     padding-left: 1.455rem;
@@ -13522,7 +13522,7 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn,
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled,
 .wizard > .actions .btn-group-vertical > a,
 .btn-group-vertical > .btn-group {
     width: 100%;
@@ -13530,7 +13530,7 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn:not(:first-child),
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:not(:first-child),
 .wizard > .actions .btn-group-vertical > a:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px;
@@ -13538,11 +13538,11 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:not(:last-child):not(.dropdown-toggle),
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:not(:last-child):not(.dropdown-toggle),
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:not(:last-child):not(.dropdown-toggle),
 .wizard > .actions .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .ajax-upload-dragdrop .btn-group-vertical > .btn-group:not(:last-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .btn-group:not(:last-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .btn-group:not(:last-child) > .swal32-styled,
 .wizard > .actions .btn-group-vertical > .btn-group:not(:last-child) > a {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -13550,11 +13550,11 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn:not(:first-child),
 .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .swal2-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .swal32-styled:not(:first-child),
 .wizard > .actions .btn-group-vertical > a:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .ajax-upload-dragdrop .btn-group-vertical > .btn-group:not(:first-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-vertical > .btn-group:not(:first-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-vertical > .btn-group:not(:first-child) > .swal32-styled,
 .wizard > .actions .btn-group-vertical > .btn-group:not(:first-child) > a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -13562,30 +13562,30 @@ input[type="button"].btn-block {
 
 .btn-group-toggle > .btn,
 .ajax-upload-dragdrop .btn-group-toggle > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .swal32-styled,
 .wizard > .actions .btn-group-toggle > a,
 .btn-group-toggle > .btn-group > .btn,
 .ajax-upload-dragdrop .btn-group-toggle > .btn-group > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .btn-group > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .btn-group > .swal32-styled,
 .wizard > .actions .btn-group-toggle > .btn-group > a {
     margin-bottom: 0;
 }
 
 .btn-group-toggle > .btn input[type="radio"],
 .ajax-upload-dragdrop .btn-group-toggle > .ajax-file-upload input[type="radio"],
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .swal2-styled input[type="radio"],
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .swal32-styled input[type="radio"],
 .wizard > .actions .btn-group-toggle > a input[type="radio"],
 .btn-group-toggle > .btn input[type="checkbox"],
 .ajax-upload-dragdrop .btn-group-toggle > .ajax-file-upload input[type="checkbox"],
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .swal2-styled input[type="checkbox"],
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .swal32-styled input[type="checkbox"],
 .wizard > .actions .btn-group-toggle > a input[type="checkbox"],
 .btn-group-toggle > .btn-group > .btn input[type="radio"],
 .ajax-upload-dragdrop .btn-group-toggle > .btn-group > .ajax-file-upload input[type="radio"],
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .btn-group > .swal2-styled input[type="radio"],
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .btn-group > .swal32-styled input[type="radio"],
 .wizard > .actions .btn-group-toggle > .btn-group > a input[type="radio"],
 .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
 .ajax-upload-dragdrop .btn-group-toggle > .btn-group > .ajax-file-upload input[type="checkbox"],
-.swal2-modal .swal2-buttonswrapper .btn-group-toggle > .btn-group > .swal2-styled input[type="checkbox"],
+.swal32-modal .swal32-buttonswrapper .btn-group-toggle > .btn-group > .swal32-styled input[type="checkbox"],
 .wizard > .actions .btn-group-toggle > .btn-group > a input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -13605,8 +13605,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control,
 .input-group > .asColorPicker-input,
 .asColorPicker-wrap > .asColorPicker-input,
-.dataTables_wrapper .input-group > select,
-.dataTables_wrapper .asColorPicker-wrap > select,
+.datables43_wrapper .input-group > select,
+.datables43_wrapper .asColorPicker-wrap > select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select,
@@ -13640,8 +13640,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .form-control,
 .input-group > .asColorPicker-input + .form-control,
 .asColorPicker-wrap > .asColorPicker-input + .form-control,
-.dataTables_wrapper .input-group > select + .form-control,
-.dataTables_wrapper .asColorPicker-wrap > select + .form-control,
+.datables43_wrapper .input-group > select + .form-control,
+.datables43_wrapper .asColorPicker-wrap > select + .form-control,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .form-control,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .form-control,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .form-control,
@@ -13662,8 +13662,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .asColorPicker-input,
 .input-group > .asColorPicker-input + .asColorPicker-input,
 .asColorPicker-wrap > .asColorPicker-input + .asColorPicker-input,
-.dataTables_wrapper .input-group > select + .asColorPicker-input,
-.dataTables_wrapper .asColorPicker-wrap > select + .asColorPicker-input,
+.datables43_wrapper .input-group > select + .asColorPicker-input,
+.datables43_wrapper .asColorPicker-wrap > select + .asColorPicker-input,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .asColorPicker-input,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .asColorPicker-input,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .asColorPicker-input,
@@ -13680,46 +13680,46 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .tt-query + .asColorPicker-input,
 .input-group > .typeahead + .asColorPicker-input,
 .asColorPicker-wrap > .typeahead + .asColorPicker-input,
-.dataTables_wrapper .input-group > .form-control + select,
-.dataTables_wrapper .asColorPicker-wrap > .form-control + select,
-.dataTables_wrapper .input-group > .asColorPicker-input + select,
-.dataTables_wrapper .asColorPicker-wrap > .asColorPicker-input + select,
-.dataTables_wrapper .input-group > select + select,
-.dataTables_wrapper .asColorPicker-wrap > select + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > input[type=text] + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > input[type=text] + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > select + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > select + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > input[type=number] + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=number] + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > input[type=number] + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=number] + select,
-.select2-container--default .dataTables_wrapper .input-group > .select2-selection--single + select,
-.dataTables_wrapper .select2-container--default .input-group > .select2-selection--single + select,
-.select2-container--default .dataTables_wrapper .asColorPicker-wrap > .select2-selection--single + select,
-.dataTables_wrapper .select2-container--default .asColorPicker-wrap > .select2-selection--single + select,
-.select2-container--default .select2-selection--single .dataTables_wrapper .input-group > .select2-search__field + select,
-.dataTables_wrapper .select2-container--default .select2-selection--single .input-group > .select2-search__field + select,
-.select2-container--default .select2-selection--single .dataTables_wrapper .asColorPicker-wrap > .select2-search__field + select,
-.dataTables_wrapper .select2-container--default .select2-selection--single .asColorPicker-wrap > .select2-search__field + select,
-.dataTables_wrapper .input-group > .tt-hint + select,
-.dataTables_wrapper .asColorPicker-wrap > .tt-hint + select,
-.dataTables_wrapper .input-group > .tt-query + select,
-.dataTables_wrapper .asColorPicker-wrap > .tt-query + select,
-.dataTables_wrapper .input-group > .typeahead + select,
-.dataTables_wrapper .asColorPicker-wrap > .typeahead + select,
+.datables43_wrapper .input-group > .form-control + select,
+.datables43_wrapper .asColorPicker-wrap > .form-control + select,
+.datables43_wrapper .input-group > .asColorPicker-input + select,
+.datables43_wrapper .asColorPicker-wrap > .asColorPicker-input + select,
+.datables43_wrapper .input-group > select + select,
+.datables43_wrapper .asColorPicker-wrap > select + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > input[type=text] + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > input[type=text] + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > select + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > select + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > input[type=number] + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=number] + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > input[type=number] + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=number] + select,
+.select2-container--default .datables43_wrapper .input-group > .select2-selection--single + select,
+.datables43_wrapper .select2-container--default .input-group > .select2-selection--single + select,
+.select2-container--default .datables43_wrapper .asColorPicker-wrap > .select2-selection--single + select,
+.datables43_wrapper .select2-container--default .asColorPicker-wrap > .select2-selection--single + select,
+.select2-container--default .select2-selection--single .datables43_wrapper .input-group > .select2-search__field + select,
+.datables43_wrapper .select2-container--default .select2-selection--single .input-group > .select2-search__field + select,
+.select2-container--default .select2-selection--single .datables43_wrapper .asColorPicker-wrap > .select2-search__field + select,
+.datables43_wrapper .select2-container--default .select2-selection--single .asColorPicker-wrap > .select2-search__field + select,
+.datables43_wrapper .input-group > .tt-hint + select,
+.datables43_wrapper .asColorPicker-wrap > .tt-hint + select,
+.datables43_wrapper .input-group > .tt-query + select,
+.datables43_wrapper .asColorPicker-wrap > .tt-query + select,
+.datables43_wrapper .input-group > .typeahead + select,
+.datables43_wrapper .asColorPicker-wrap > .typeahead + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .form-control + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .form-control + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .asColorPicker-input + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .asColorPicker-input + input[type=text],
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=text],
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > select + input[type=text],
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + input[type=text],
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > select + input[type=text],
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=text],
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > select + input[type=text],
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + input[type=text],
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > select + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=text],
@@ -13744,10 +13744,10 @@ input[type="button"].btn-block {
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .form-control + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .asColorPicker-input + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .asColorPicker-input + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > select + select,
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + select,
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > select + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > select + select,
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + select,
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > select + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + select,
@@ -13772,10 +13772,10 @@ input[type="button"].btn-block {
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .form-control + input[type=number],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .asColorPicker-input + input[type=number],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .asColorPicker-input + input[type=number],
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=number],
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .input-group > select + input[type=number],
-.dataTables_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + input[type=number],
-.jsgrid .jsgrid-table .jsgrid-filter-row .dataTables_wrapper .asColorPicker-wrap > select + input[type=number],
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=number],
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .input-group > select + input[type=number],
+.datables43_wrapper .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > select + input[type=number],
+.jsgrid .jsgrid-table .jsgrid-filter-row .datables43_wrapper .asColorPicker-wrap > select + input[type=number],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + input[type=number],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + input[type=number],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + input[type=number],
@@ -13800,10 +13800,10 @@ input[type="button"].btn-block {
 .select2-container--default .asColorPicker-wrap > .form-control + .select2-selection--single,
 .select2-container--default .input-group > .asColorPicker-input + .select2-selection--single,
 .select2-container--default .asColorPicker-wrap > .asColorPicker-input + .select2-selection--single,
-.dataTables_wrapper .select2-container--default .input-group > select + .select2-selection--single,
-.select2-container--default .dataTables_wrapper .input-group > select + .select2-selection--single,
-.dataTables_wrapper .select2-container--default .asColorPicker-wrap > select + .select2-selection--single,
-.select2-container--default .dataTables_wrapper .asColorPicker-wrap > select + .select2-selection--single,
+.datables43_wrapper .select2-container--default .input-group > select + .select2-selection--single,
+.select2-container--default .datables43_wrapper .input-group > select + .select2-selection--single,
+.datables43_wrapper .select2-container--default .asColorPicker-wrap > select + .select2-selection--single,
+.select2-container--default .datables43_wrapper .asColorPicker-wrap > select + .select2-selection--single,
 .jsgrid .jsgrid-table .jsgrid-filter-row .select2-container--default .input-group > input[type=text] + .select2-selection--single,
 .select2-container--default .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .select2-selection--single,
 .jsgrid .jsgrid-table .jsgrid-filter-row .select2-container--default .asColorPicker-wrap > input[type=text] + .select2-selection--single,
@@ -13830,10 +13830,10 @@ input[type="button"].btn-block {
 .select2-container--default .select2-selection--single .asColorPicker-wrap > .form-control + .select2-search__field,
 .select2-container--default .select2-selection--single .input-group > .asColorPicker-input + .select2-search__field,
 .select2-container--default .select2-selection--single .asColorPicker-wrap > .asColorPicker-input + .select2-search__field,
-.dataTables_wrapper .select2-container--default .select2-selection--single .input-group > select + .select2-search__field,
-.select2-container--default .select2-selection--single .dataTables_wrapper .input-group > select + .select2-search__field,
-.dataTables_wrapper .select2-container--default .select2-selection--single .asColorPicker-wrap > select + .select2-search__field,
-.select2-container--default .select2-selection--single .dataTables_wrapper .asColorPicker-wrap > select + .select2-search__field,
+.datables43_wrapper .select2-container--default .select2-selection--single .input-group > select + .select2-search__field,
+.select2-container--default .select2-selection--single .datables43_wrapper .input-group > select + .select2-search__field,
+.datables43_wrapper .select2-container--default .select2-selection--single .asColorPicker-wrap > select + .select2-search__field,
+.select2-container--default .select2-selection--single .datables43_wrapper .asColorPicker-wrap > select + .select2-search__field,
 .jsgrid .jsgrid-table .jsgrid-filter-row .select2-container--default .select2-selection--single .input-group > input[type=text] + .select2-search__field,
 .select2-container--default .select2-selection--single .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .select2-search__field,
 .jsgrid .jsgrid-table .jsgrid-filter-row .select2-container--default .select2-selection--single .asColorPicker-wrap > input[type=text] + .select2-search__field,
@@ -13860,8 +13860,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .tt-hint,
 .input-group > .asColorPicker-input + .tt-hint,
 .asColorPicker-wrap > .asColorPicker-input + .tt-hint,
-.dataTables_wrapper .input-group > select + .tt-hint,
-.dataTables_wrapper .asColorPicker-wrap > select + .tt-hint,
+.datables43_wrapper .input-group > select + .tt-hint,
+.datables43_wrapper .asColorPicker-wrap > select + .tt-hint,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .tt-hint,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .tt-hint,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .tt-hint,
@@ -13882,8 +13882,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .tt-query,
 .input-group > .asColorPicker-input + .tt-query,
 .asColorPicker-wrap > .asColorPicker-input + .tt-query,
-.dataTables_wrapper .input-group > select + .tt-query,
-.dataTables_wrapper .asColorPicker-wrap > select + .tt-query,
+.datables43_wrapper .input-group > select + .tt-query,
+.datables43_wrapper .asColorPicker-wrap > select + .tt-query,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .tt-query,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .tt-query,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .tt-query,
@@ -13904,8 +13904,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .typeahead,
 .input-group > .asColorPicker-input + .typeahead,
 .asColorPicker-wrap > .asColorPicker-input + .typeahead,
-.dataTables_wrapper .input-group > select + .typeahead,
-.dataTables_wrapper .asColorPicker-wrap > select + .typeahead,
+.datables43_wrapper .input-group > select + .typeahead,
+.datables43_wrapper .asColorPicker-wrap > select + .typeahead,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .typeahead,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .typeahead,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .typeahead,
@@ -13926,8 +13926,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .custom-select,
 .input-group > .asColorPicker-input + .custom-select,
 .asColorPicker-wrap > .asColorPicker-input + .custom-select,
-.dataTables_wrapper .input-group > select + .custom-select,
-.dataTables_wrapper .asColorPicker-wrap > select + .custom-select,
+.datables43_wrapper .input-group > select + .custom-select,
+.datables43_wrapper .asColorPicker-wrap > select + .custom-select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .custom-select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .custom-select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .custom-select,
@@ -13948,8 +13948,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control + .custom-file,
 .input-group > .asColorPicker-input + .custom-file,
 .asColorPicker-wrap > .asColorPicker-input + .custom-file,
-.dataTables_wrapper .input-group > select + .custom-file,
-.dataTables_wrapper .asColorPicker-wrap > select + .custom-file,
+.datables43_wrapper .input-group > select + .custom-file,
+.datables43_wrapper .asColorPicker-wrap > select + .custom-file,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input[type=text] + .custom-file,
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input[type=text] + .custom-file,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select + .custom-file,
@@ -13970,8 +13970,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control-plaintext + .form-control,
 .input-group > .form-control-plaintext + .asColorPicker-input,
 .asColorPicker-wrap > .form-control-plaintext + .asColorPicker-input,
-.dataTables_wrapper .input-group > .form-control-plaintext + select,
-.dataTables_wrapper .asColorPicker-wrap > .form-control-plaintext + select,
+.datables43_wrapper .input-group > .form-control-plaintext + select,
+.datables43_wrapper .asColorPicker-wrap > .form-control-plaintext + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .form-control-plaintext + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .form-control-plaintext + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .form-control-plaintext + select,
@@ -13996,8 +13996,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .custom-select + .form-control,
 .input-group > .custom-select + .asColorPicker-input,
 .asColorPicker-wrap > .custom-select + .asColorPicker-input,
-.dataTables_wrapper .input-group > .custom-select + select,
-.dataTables_wrapper .asColorPicker-wrap > .custom-select + select,
+.datables43_wrapper .input-group > .custom-select + select,
+.datables43_wrapper .asColorPicker-wrap > .custom-select + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .custom-select + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .custom-select + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .custom-select + select,
@@ -14022,8 +14022,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .custom-file + .form-control,
 .input-group > .custom-file + .asColorPicker-input,
 .asColorPicker-wrap > .custom-file + .asColorPicker-input,
-.dataTables_wrapper .input-group > .custom-file + select,
-.dataTables_wrapper .asColorPicker-wrap > .custom-file + select,
+.datables43_wrapper .input-group > .custom-file + select,
+.datables43_wrapper .asColorPicker-wrap > .custom-file + select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .custom-file + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > .custom-file + input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > .custom-file + select,
@@ -14051,8 +14051,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control:focus,
 .input-group > .asColorPicker-input:focus,
 .asColorPicker-wrap > .asColorPicker-input:focus,
-.dataTables_wrapper .input-group > select:focus,
-.dataTables_wrapper .asColorPicker-wrap > select:focus,
+.datables43_wrapper .input-group > select:focus,
+.datables43_wrapper .asColorPicker-wrap > select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select:focus,
@@ -14085,8 +14085,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control:not(:last-child),
 .input-group > .asColorPicker-input:not(:last-child),
 .asColorPicker-wrap > .asColorPicker-input:not(:last-child),
-.dataTables_wrapper .input-group > select:not(:last-child),
-.dataTables_wrapper .asColorPicker-wrap > select:not(:last-child),
+.datables43_wrapper .input-group > select:not(:last-child),
+.datables43_wrapper .asColorPicker-wrap > select:not(:last-child),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input:not(:last-child)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input:not(:last-child)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select:not(:last-child),
@@ -14113,8 +14113,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .form-control:not(:first-child),
 .input-group > .asColorPicker-input:not(:first-child),
 .asColorPicker-wrap > .asColorPicker-input:not(:first-child),
-.dataTables_wrapper .input-group > select:not(:first-child),
-.dataTables_wrapper .asColorPicker-wrap > select:not(:first-child),
+.datables43_wrapper .input-group > select:not(:first-child),
+.datables43_wrapper .asColorPicker-wrap > select:not(:first-child),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > input:not(:first-child)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .asColorPicker-wrap > input:not(:first-child)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group > select:not(:first-child),
@@ -14169,10 +14169,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload,
 .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled,
 .input-group-prepend .wizard > .actions a,
 .wizard > .actions .input-group-prepend a,
 .asColorPicker-trigger .wizard > .actions a,
@@ -14180,8 +14180,8 @@ input[type="button"].btn-block {
 .input-group-append .btn,
 .input-group-append .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-append .ajax-file-upload,
-.input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled,
+.input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled,
 .input-group-append .wizard > .actions a,
 .wizard > .actions .input-group-append a {
     position: relative;
@@ -14194,10 +14194,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload:focus,
 .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload:focus,
 .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload:focus,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled:focus,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled:focus,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled:focus,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled:focus,
 .input-group-prepend .wizard > .actions a:focus,
 .wizard > .actions .input-group-prepend a:focus,
 .asColorPicker-trigger .wizard > .actions a:focus,
@@ -14205,8 +14205,8 @@ input[type="button"].btn-block {
 .input-group-append .btn:focus,
 .input-group-append .ajax-upload-dragdrop .ajax-file-upload:focus,
 .ajax-upload-dragdrop .input-group-append .ajax-file-upload:focus,
-.input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
-.swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled:focus,
+.input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
+.swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled:focus,
 .input-group-append .wizard > .actions a:focus,
 .wizard > .actions .input-group-append a:focus {
     z-index: 3;
@@ -14218,10 +14218,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload + .btn,
 .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + .btn,
 .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + .btn,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled + .btn,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled + .btn,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled + .btn,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled + .btn,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled + .btn,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled + .btn,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled + .btn,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled + .btn,
 .input-group-prepend .wizard > .actions a + .btn,
 .wizard > .actions .input-group-prepend a + .btn,
 .asColorPicker-trigger .wizard > .actions a + .btn,
@@ -14234,14 +14234,14 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload + .ajax-file-upload,
 .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + .ajax-file-upload,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled + .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled + .ajax-file-upload,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled + .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled + .ajax-file-upload,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled + .ajax-file-upload,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled + .ajax-file-upload,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled + .ajax-file-upload,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled + .ajax-file-upload,
 .input-group-prepend .wizard > .actions .ajax-upload-dragdrop a + .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-prepend .wizard > .actions a + .ajax-file-upload,
 .wizard > .actions .input-group-prepend .ajax-upload-dragdrop a + .ajax-file-upload,
@@ -14250,30 +14250,30 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .asColorPicker-trigger .wizard > .actions a + .ajax-file-upload,
 .wizard > .actions .asColorPicker-trigger .ajax-upload-dragdrop a + .ajax-file-upload,
 .ajax-upload-dragdrop .wizard > .actions .asColorPicker-trigger a + .ajax-file-upload,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .btn + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .btn + .swal2-styled,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .btn + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .btn + .swal2-styled,
-.input-group-prepend .ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .ajax-upload-dragdrop .ajax-file-upload + .swal2-styled,
-.ajax-upload-dragdrop .input-group-prepend .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload + .swal2-styled,
-.asColorPicker-trigger .ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + .swal2-styled,
-.ajax-upload-dragdrop .asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + .swal2-styled,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled + .swal2-styled,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled + .swal2-styled,
-.input-group-prepend .wizard > .actions .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .wizard > .actions a + .swal2-styled,
-.wizard > .actions .input-group-prepend .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .wizard > .actions .input-group-prepend a + .swal2-styled,
-.asColorPicker-trigger .wizard > .actions .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .wizard > .actions a + .swal2-styled,
-.wizard > .actions .asColorPicker-trigger .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .wizard > .actions .asColorPicker-trigger a + .swal2-styled,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .btn + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .btn + .swal32-styled,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .btn + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .btn + .swal32-styled,
+.input-group-prepend .ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .ajax-upload-dragdrop .ajax-file-upload + .swal32-styled,
+.ajax-upload-dragdrop .input-group-prepend .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload + .swal32-styled,
+.asColorPicker-trigger .ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + .swal32-styled,
+.ajax-upload-dragdrop .asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + .swal32-styled,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled + .swal32-styled,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled + .swal32-styled,
+.input-group-prepend .wizard > .actions .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .wizard > .actions a + .swal32-styled,
+.wizard > .actions .input-group-prepend .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .wizard > .actions .input-group-prepend a + .swal32-styled,
+.asColorPicker-trigger .wizard > .actions .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .wizard > .actions a + .swal32-styled,
+.wizard > .actions .asColorPicker-trigger .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .wizard > .actions .asColorPicker-trigger a + .swal32-styled,
 .input-group-prepend .wizard > .actions .btn + a,
 .wizard > .actions .input-group-prepend .btn + a,
 .asColorPicker-trigger .wizard > .actions .btn + a,
@@ -14286,14 +14286,14 @@ input[type="button"].btn-block {
 .wizard > .actions .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + a,
 .ajax-upload-dragdrop .asColorPicker-trigger .wizard > .actions .ajax-file-upload + a,
 .wizard > .actions .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + a,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .wizard > .actions .swal2-styled + a,
-.wizard > .actions .input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled + a,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .wizard > .actions .swal2-styled + a,
-.wizard > .actions .swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled + a,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .wizard > .actions .swal2-styled + a,
-.wizard > .actions .asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled + a,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .wizard > .actions .swal2-styled + a,
-.wizard > .actions .swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled + a,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .wizard > .actions .swal32-styled + a,
+.wizard > .actions .input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled + a,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .wizard > .actions .swal32-styled + a,
+.wizard > .actions .swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled + a,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .wizard > .actions .swal32-styled + a,
+.wizard > .actions .asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled + a,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .wizard > .actions .swal32-styled + a,
+.wizard > .actions .swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled + a,
 .input-group-prepend .wizard > .actions a + a,
 .wizard > .actions .input-group-prepend a + a,
 .asColorPicker-trigger .wizard > .actions a + a,
@@ -14304,10 +14304,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .ajax-file-upload + .input-group-text,
 .asColorPicker-trigger .ajax-upload-dragdrop .ajax-file-upload + .input-group-text,
 .ajax-upload-dragdrop .asColorPicker-trigger .ajax-file-upload + .input-group-text,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .swal2-styled + .input-group-text,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .swal2-styled + .input-group-text,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .swal2-styled + .input-group-text,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .swal2-styled + .input-group-text,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .swal32-styled + .input-group-text,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .swal32-styled + .input-group-text,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .swal32-styled + .input-group-text,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .swal32-styled + .input-group-text,
 .input-group-prepend .wizard > .actions a + .input-group-text,
 .wizard > .actions .input-group-prepend a + .input-group-text,
 .asColorPicker-trigger .wizard > .actions a + .input-group-text,
@@ -14320,10 +14320,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .input-group-prepend .input-group-text + .ajax-file-upload,
 .asColorPicker-trigger .ajax-upload-dragdrop .input-group-text + .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-trigger .input-group-text + .ajax-file-upload,
-.input-group-prepend .swal2-modal .swal2-buttonswrapper .input-group-text + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-prepend .input-group-text + .swal2-styled,
-.asColorPicker-trigger .swal2-modal .swal2-buttonswrapper .input-group-text + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-trigger .input-group-text + .swal2-styled,
+.input-group-prepend .swal32-modal .swal32-buttonswrapper .input-group-text + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-prepend .input-group-text + .swal32-styled,
+.asColorPicker-trigger .swal32-modal .swal32-buttonswrapper .input-group-text + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-trigger .input-group-text + .swal32-styled,
 .input-group-prepend .wizard > .actions .input-group-text + a,
 .wizard > .actions .input-group-prepend .input-group-text + a,
 .asColorPicker-trigger .wizard > .actions .input-group-text + a,
@@ -14331,59 +14331,59 @@ input[type="button"].btn-block {
 .input-group-append .btn + .btn,
 .input-group-append .ajax-upload-dragdrop .ajax-file-upload + .btn,
 .ajax-upload-dragdrop .input-group-append .ajax-file-upload + .btn,
-.input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled + .btn,
-.swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled + .btn,
+.input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled + .btn,
+.swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled + .btn,
 .input-group-append .wizard > .actions a + .btn,
 .wizard > .actions .input-group-append a + .btn,
 .input-group-append .ajax-upload-dragdrop .btn + .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-append .btn + .ajax-file-upload,
 .input-group-append .ajax-upload-dragdrop .ajax-file-upload + .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-append .ajax-file-upload + .ajax-file-upload,
-.input-group-append .swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled + .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-append .ajax-upload-dragdrop .swal2-styled + .ajax-file-upload,
-.ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled + .ajax-file-upload,
+.input-group-append .swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled + .ajax-file-upload,
+.swal32-modal .swal32-buttonswrapper .input-group-append .ajax-upload-dragdrop .swal32-styled + .ajax-file-upload,
+.ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled + .ajax-file-upload,
 .input-group-append .wizard > .actions .ajax-upload-dragdrop a + .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-append .wizard > .actions a + .ajax-file-upload,
 .wizard > .actions .input-group-append .ajax-upload-dragdrop a + .ajax-file-upload,
 .ajax-upload-dragdrop .wizard > .actions .input-group-append a + .ajax-file-upload,
-.input-group-append .swal2-modal .swal2-buttonswrapper .btn + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .btn + .swal2-styled,
-.input-group-append .ajax-upload-dragdrop .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .ajax-upload-dragdrop .ajax-file-upload + .swal2-styled,
-.ajax-upload-dragdrop .input-group-append .swal2-modal .swal2-buttonswrapper .ajax-file-upload + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .ajax-upload-dragdrop .input-group-append .ajax-file-upload + .swal2-styled,
-.input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled + .swal2-styled,
-.input-group-append .wizard > .actions .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .wizard > .actions a + .swal2-styled,
-.wizard > .actions .input-group-append .swal2-modal .swal2-buttonswrapper a + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .wizard > .actions .input-group-append a + .swal2-styled,
+.input-group-append .swal32-modal .swal32-buttonswrapper .btn + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .btn + .swal32-styled,
+.input-group-append .ajax-upload-dragdrop .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .ajax-upload-dragdrop .ajax-file-upload + .swal32-styled,
+.ajax-upload-dragdrop .input-group-append .swal32-modal .swal32-buttonswrapper .ajax-file-upload + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .ajax-upload-dragdrop .input-group-append .ajax-file-upload + .swal32-styled,
+.input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled + .swal32-styled,
+.input-group-append .wizard > .actions .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .wizard > .actions a + .swal32-styled,
+.wizard > .actions .input-group-append .swal32-modal .swal32-buttonswrapper a + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .wizard > .actions .input-group-append a + .swal32-styled,
 .input-group-append .wizard > .actions .btn + a,
 .wizard > .actions .input-group-append .btn + a,
 .input-group-append .ajax-upload-dragdrop .wizard > .actions .ajax-file-upload + a,
 .wizard > .actions .input-group-append .ajax-upload-dragdrop .ajax-file-upload + a,
 .ajax-upload-dragdrop .input-group-append .wizard > .actions .ajax-file-upload + a,
 .wizard > .actions .ajax-upload-dragdrop .input-group-append .ajax-file-upload + a,
-.input-group-append .swal2-modal .swal2-buttonswrapper .wizard > .actions .swal2-styled + a,
-.wizard > .actions .input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled + a,
-.swal2-modal .swal2-buttonswrapper .input-group-append .wizard > .actions .swal2-styled + a,
-.wizard > .actions .swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled + a,
+.input-group-append .swal32-modal .swal32-buttonswrapper .wizard > .actions .swal32-styled + a,
+.wizard > .actions .input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled + a,
+.swal32-modal .swal32-buttonswrapper .input-group-append .wizard > .actions .swal32-styled + a,
+.wizard > .actions .swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled + a,
 .input-group-append .wizard > .actions a + a,
 .wizard > .actions .input-group-append a + a,
 .input-group-append .btn + .input-group-text,
 .input-group-append .ajax-upload-dragdrop .ajax-file-upload + .input-group-text,
 .ajax-upload-dragdrop .input-group-append .ajax-file-upload + .input-group-text,
-.input-group-append .swal2-modal .swal2-buttonswrapper .swal2-styled + .input-group-text,
-.swal2-modal .swal2-buttonswrapper .input-group-append .swal2-styled + .input-group-text,
+.input-group-append .swal32-modal .swal32-buttonswrapper .swal32-styled + .input-group-text,
+.swal32-modal .swal32-buttonswrapper .input-group-append .swal32-styled + .input-group-text,
 .input-group-append .wizard > .actions a + .input-group-text,
 .wizard > .actions .input-group-append a + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn,
 .input-group-append .ajax-upload-dragdrop .input-group-text + .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-append .input-group-text + .ajax-file-upload,
-.input-group-append .swal2-modal .swal2-buttonswrapper .input-group-text + .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-append .input-group-text + .swal2-styled,
+.input-group-append .swal32-modal .swal32-buttonswrapper .input-group-text + .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-append .input-group-text + .swal32-styled,
 .input-group-append .wizard > .actions .input-group-text + a,
 .wizard > .actions .input-group-append .input-group-text + a {
     margin-left: -1px;
@@ -14421,7 +14421,7 @@ input[type="button"].btn-block {
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .asColorPicker-input:not(textarea),
-.dataTables_wrapper .input-group-lg > select:not(textarea),
+.datables43_wrapper .input-group-lg > select:not(textarea),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input:not(textarea)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > select:not(textarea),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input:not(textarea)[type=number],
@@ -14436,7 +14436,7 @@ input[type="button"].btn-block {
 
 .input-group-lg > .form-control,
 .input-group-lg > .asColorPicker-input,
-.dataTables_wrapper .input-group-lg > select,
+.datables43_wrapper .input-group-lg > select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-lg > input[type=number],
@@ -14453,13 +14453,13 @@ input[type="button"].btn-block {
 .input-group-lg > .asColorPicker-trigger > .btn,
 .ajax-upload-dragdrop .input-group-lg > .input-group-prepend > .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-lg > .asColorPicker-trigger > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-lg > .input-group-prepend > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-lg > .asColorPicker-trigger > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-lg > .input-group-prepend > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-lg > .asColorPicker-trigger > .swal32-styled,
 .wizard > .actions .input-group-lg > .input-group-prepend > a,
 .wizard > .actions .input-group-lg > .asColorPicker-trigger > a,
 .input-group-lg > .input-group-append > .btn,
 .ajax-upload-dragdrop .input-group-lg > .input-group-append > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-lg > .input-group-append > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-lg > .input-group-append > .swal32-styled,
 .wizard > .actions .input-group-lg > .input-group-append > a {
     padding: 0.94rem 1.94rem;
     font-size: 1.25rem;
@@ -14469,7 +14469,7 @@ input[type="button"].btn-block {
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .asColorPicker-input:not(textarea),
-.dataTables_wrapper .input-group-sm > select:not(textarea),
+.datables43_wrapper .input-group-sm > select:not(textarea),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > input:not(textarea)[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > select:not(textarea),
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > input:not(textarea)[type=number],
@@ -14484,7 +14484,7 @@ input[type="button"].btn-block {
 
 .input-group-sm > .form-control,
 .input-group-sm > .asColorPicker-input,
-.dataTables_wrapper .input-group-sm > select,
+.datables43_wrapper .input-group-sm > select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > select,
 .jsgrid .jsgrid-table .jsgrid-filter-row .input-group-sm > input[type=number],
@@ -14501,13 +14501,13 @@ input[type="button"].btn-block {
 .input-group-sm > .asColorPicker-trigger > .btn,
 .ajax-upload-dragdrop .input-group-sm > .input-group-prepend > .ajax-file-upload,
 .ajax-upload-dragdrop .input-group-sm > .asColorPicker-trigger > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-sm > .input-group-prepend > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group-sm > .asColorPicker-trigger > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-sm > .input-group-prepend > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-sm > .asColorPicker-trigger > .swal32-styled,
 .wizard > .actions .input-group-sm > .input-group-prepend > a,
 .wizard > .actions .input-group-sm > .asColorPicker-trigger > a,
 .input-group-sm > .input-group-append > .btn,
 .ajax-upload-dragdrop .input-group-sm > .input-group-append > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group-sm > .input-group-append > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group-sm > .input-group-append > .swal32-styled,
 .wizard > .actions .input-group-sm > .input-group-append > a {
     padding: 0.5rem 0.81rem;
     font-size: 0.875rem;
@@ -14528,10 +14528,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-prepend > .ajax-file-upload,
 .ajax-upload-dragdrop .input-group > .asColorPicker-trigger > .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-wrap > .asColorPicker-trigger > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-prepend > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-prepend > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group > .asColorPicker-trigger > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-prepend > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-prepend > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .asColorPicker-trigger > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger > .swal32-styled,
 .wizard > .actions .input-group > .input-group-prepend > a,
 .wizard > .actions .asColorPicker-wrap > .input-group-prepend > a,
 .wizard > .actions .input-group > .asColorPicker-trigger > a,
@@ -14544,8 +14544,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .input-group-append:not(:last-child) > .btn,
 .ajax-upload-dragdrop .input-group > .input-group-append:not(:last-child) > .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-append:not(:last-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-append:not(:last-child) > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-append:not(:last-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-append:not(:last-child) > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-append:not(:last-child) > .swal32-styled,
 .wizard > .actions .input-group > .input-group-append:not(:last-child) > a,
 .wizard > .actions .asColorPicker-wrap > .input-group-append:not(:last-child) > a,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
@@ -14554,8 +14554,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .ajax-upload-dragdrop .input-group > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle),
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-append:last-child > .ajax-file-upload:not(:last-child):not(.dropdown-toggle),
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle),
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-append:last-child > .swal2-styled:not(:last-child):not(.dropdown-toggle),
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-append:last-child > .swal32-styled:not(:last-child):not(.dropdown-toggle),
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-append:last-child > .swal32-styled:not(:last-child):not(.dropdown-toggle),
 .wizard > .actions .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .wizard > .actions .asColorPicker-wrap > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child),
@@ -14568,8 +14568,8 @@ input[type="button"].btn-block {
 .asColorPicker-wrap > .input-group-append > .btn,
 .ajax-upload-dragdrop .input-group > .input-group-append > .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-append > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-append > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-append > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-append > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-append > .swal32-styled,
 .wizard > .actions .input-group > .input-group-append > a,
 .wizard > .actions .asColorPicker-wrap > .input-group-append > a,
 .input-group > .input-group-append > .input-group-text,
@@ -14582,10 +14582,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-prepend:not(:first-child) > .ajax-file-upload,
 .ajax-upload-dragdrop .input-group > .asColorPicker-trigger:not(:first-child) > .ajax-file-upload,
 .ajax-upload-dragdrop .asColorPicker-wrap > .asColorPicker-trigger:not(:first-child) > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-prepend:not(:first-child) > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-prepend:not(:first-child) > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .input-group > .asColorPicker-trigger:not(:first-child) > .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger:not(:first-child) > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-prepend:not(:first-child) > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-prepend:not(:first-child) > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .input-group > .asColorPicker-trigger:not(:first-child) > .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger:not(:first-child) > .swal32-styled,
 .wizard > .actions .input-group > .input-group-prepend:not(:first-child) > a,
 .wizard > .actions .asColorPicker-wrap > .input-group-prepend:not(:first-child) > a,
 .wizard > .actions .input-group > .asColorPicker-trigger:not(:first-child) > a,
@@ -14602,10 +14602,10 @@ input[type="button"].btn-block {
 .ajax-upload-dragdrop .asColorPicker-wrap > .input-group-prepend:first-child > .ajax-file-upload:not(:first-child),
 .ajax-upload-dragdrop .input-group > .asColorPicker-trigger:first-child > .ajax-file-upload:not(:first-child),
 .ajax-upload-dragdrop .asColorPicker-wrap > .asColorPicker-trigger:first-child > .ajax-file-upload:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .input-group > .input-group-prepend:first-child > .swal2-styled:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .input-group-prepend:first-child > .swal2-styled:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .input-group > .asColorPicker-trigger:first-child > .swal2-styled:not(:first-child),
-.swal2-modal .swal2-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger:first-child > .swal2-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .input-group > .input-group-prepend:first-child > .swal32-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .input-group-prepend:first-child > .swal32-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .input-group > .asColorPicker-trigger:first-child > .swal32-styled:not(:first-child),
+.swal32-modal .swal32-buttonswrapper .asColorPicker-wrap > .asColorPicker-trigger:first-child > .swal32-styled:not(:first-child),
 .wizard > .actions .input-group > .input-group-prepend:first-child > a:not(:first-child),
 .wizard > .actions .asColorPicker-wrap > .input-group-prepend:first-child > a:not(:first-child),
 .wizard > .actions .input-group > .asColorPicker-trigger:first-child > a:not(:first-child),
@@ -16093,7 +16093,7 @@ a.badge:focus {
 
 .btn .badge,
 .ajax-upload-dragdrop .ajax-file-upload .badge,
-.swal2-modal .swal2-buttonswrapper .swal2-styled .badge,
+.swal32-modal .swal32-buttonswrapper .swal32-styled .badge,
 .wizard > .actions a .badge {
     position: relative;
     top: -1px;
@@ -17994,7 +17994,7 @@ button.bg-dark:focus,
 .email-wrapper .message-body .attachments-sections ul li .thumb,
 .email-wrapper .message-body .attachments-sections ul li .details .buttons,
 .lightGallery .image-tile .demo-gallery-poster,
-.swal2-modal {
+.swal32-modal {
     display: flex !important;
 }
 
@@ -19249,7 +19249,7 @@ button.bg-dark:focus,
 .mt-2,
 .template-demo > .btn,
 .ajax-upload-dragdrop .template-demo > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .template-demo > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .template-demo > .swal32-styled,
 .wizard > .actions .template-demo > a,
 .template-demo > .btn-toolbar,
 .template-demo > .btn-group,
@@ -19261,7 +19261,7 @@ button.bg-dark:focus,
 .mr-2,
 .template-demo > .btn,
 .ajax-upload-dragdrop .template-demo > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .template-demo > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .template-demo > .swal32-styled,
 .wizard > .actions .template-demo > a,
 .template-demo > .btn-toolbar,
 .template-demo > .btn-group,
@@ -21860,7 +21860,7 @@ body {
 
 .form-control,
 .asColorPicker-input,
-.dataTables_wrapper select,
+.datables43_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
@@ -21871,7 +21871,7 @@ body {
 .typeahead,
 .form-control:focus,
 .asColorPicker-input:focus,
-.dataTables_wrapper select:focus,
+.datables43_wrapper select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number],
@@ -21886,7 +21886,7 @@ body {
 
 .form-control,
 .asColorPicker-input,
-.dataTables_wrapper select,
+.datables43_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
@@ -21900,7 +21900,7 @@ body {
 
 .form-control:focus,
 .asColorPicker-input:focus,
-.dataTables_wrapper select:focus,
+.datables43_wrapper select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number],
@@ -21940,7 +21940,7 @@ select::-moz-focus-inner {
 
 .form-control:focus,
 .asColorPicker-input:focus,
-.dataTables_wrapper select:focus,
+.datables43_wrapper select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
 .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=number],
@@ -21968,26 +21968,26 @@ textarea {
 
 .btn,
 .ajax-upload-dragdrop .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel,
+.swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel,
 .wizard > .actions a,
 .btn-group.open .dropdown-toggle,
 .btn:active,
 .ajax-upload-dragdrop .ajax-file-upload:active,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:active,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:active,
 .wizard > .actions a:active,
 .btn:focus,
 .ajax-upload-dragdrop .ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
 .wizard > .actions a:focus,
 .btn:hover,
 .ajax-upload-dragdrop .ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:hover,
 .wizard > .actions a:hover,
 .btn:visited,
 .ajax-upload-dragdrop .ajax-file-upload:visited,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:visited,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:visited,
 .wizard > .actions a:visited,
 a,
 a:active,
@@ -22022,27 +22022,27 @@ textarea:visited {
 
 .btn.active.focus,
 .ajax-upload-dragdrop .active.focus.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .active.focus.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .active.focus.swal32-styled,
 .wizard > .actions a.active.focus,
 .btn.active:focus,
 .ajax-upload-dragdrop .active.ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .active.swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .active.swal32-styled:focus,
 .wizard > .actions a.active:focus,
 .btn.focus,
 .ajax-upload-dragdrop .focus.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .focus.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .focus.swal32-styled,
 .wizard > .actions a.focus,
 .btn:active.focus,
 .ajax-upload-dragdrop .ajax-file-upload:active.focus,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:active.focus,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:active.focus,
 .wizard > .actions a:active.focus,
 .btn:active:focus,
 .ajax-upload-dragdrop .ajax-file-upload:active:focus,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:active:focus,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:active:focus,
 .wizard > .actions a:active:focus,
 .btn:focus,
 .ajax-upload-dragdrop .ajax-file-upload:focus,
-.swal2-modal .swal2-buttonswrapper .swal2-styled:focus,
+.swal32-modal .swal32-buttonswrapper .swal32-styled:focus,
 .wizard > .actions a:focus,
 button,
 button:active,
@@ -22559,8 +22559,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .btn,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .ajax-file-upload,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .swal2-styled,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .swal32-modal .swal32-buttonswrapper .swal32-styled,
+ .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .swal32-styled,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn .wizard > .actions a,
 .wizard > .actions .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item .nav-link.nav-btn a {
     background: rgba(255, 255, 255, 0.1);
@@ -22646,8 +22646,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -22672,8 +22672,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger:-ms-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control:-ms-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input:-ms-input-placeholder,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select:-ms-input-placeholder,
-.dataTables_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select:-ms-input-placeholder,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select:-ms-input-placeholder,
+.datables43_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select:-ms-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input:-ms-input-placeholder[type=text],
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder,
@@ -22695,8 +22695,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger:-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control:-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input:-moz-placeholder,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select:-moz-placeholder,
-.dataTables_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select:-moz-placeholder,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select:-moz-placeholder,
+.datables43_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select:-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input:-moz-placeholder[type=text],
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder,
@@ -22718,8 +22718,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger::-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control::-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input::-moz-placeholder,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select::-moz-placeholder,
-.dataTables_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select::-moz-placeholder,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select::-moz-placeholder,
+.datables43_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select::-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text]::-moz-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder,
@@ -22741,8 +22741,8 @@ input:focus {
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger::-webkit-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control::-webkit-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input::-webkit-input-placeholder,
-.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select::-webkit-input-placeholder,
-.dataTables_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select::-webkit-input-placeholder,
+.navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select::-webkit-input-placeholder,
+.datables43_wrapper .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select::-webkit-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text]::-webkit-input-placeholder,
 .navbar.default-layout .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder,
@@ -22797,8 +22797,8 @@ input:focus {
 .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -22853,8 +22853,8 @@ input:focus {
 .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -22909,8 +22909,8 @@ input:focus {
 .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -22965,8 +22965,8 @@ input:focus {
 .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -23021,8 +23021,8 @@ input:focus {
 .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -23077,8 +23077,8 @@ input:focus {
 .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -23133,8 +23133,8 @@ input:focus {
 .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-trigger,
 .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .form-control,
 .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .asColorPicker-input,
-.navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .dataTables_wrapper select,
-.dataTables_wrapper .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
+.navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .datables43_wrapper select,
+.datables43_wrapper .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper select,
 .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper input[type=text],
 .navbar.default-layout.navbar-pink .navbar-menu-wrapper .navbar-nav .nav-item.search-wrapper .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -23776,8 +23776,8 @@ pre {
 .template-demo > .btn-group .btn,
 .template-demo > .btn-group .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .template-demo > .btn-group .ajax-file-upload,
-.template-demo > .btn-group .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .template-demo > .btn-group .swal2-styled,
+.template-demo > .btn-group .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .template-demo > .btn-group .swal32-styled,
 .template-demo > .btn-group .wizard > .actions a,
 .wizard > .actions .template-demo > .btn-group a {
     margin: 0;
@@ -25320,9 +25320,9 @@ pre {
 /* Buttons */
 .btn,
 .ajax-upload-dragdrop .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel,
+.swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel,
 .wizard > .actions a {
     font-size: 0.875rem;
     line-height: 1;
@@ -25331,16 +25331,16 @@ pre {
 
 .btn i,
 .ajax-upload-dragdrop .ajax-file-upload i,
-.swal2-modal .swal2-buttonswrapper .swal2-styled i,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm i,
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel i,
+.swal32-modal .swal32-buttonswrapper .swal32-styled i,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm i,
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel i,
 .wizard > .actions a i {
     margin-right: 0.3125rem;
 }
 
 .btn .btn-label:before,
 .ajax-upload-dragdrop .ajax-file-upload .btn-label:before,
-.swal2-modal .swal2-buttonswrapper .swal2-styled .btn-label:before,
+.swal32-modal .swal32-buttonswrapper .swal32-styled .btn-label:before,
 .wizard > .actions a .btn-label:before {
     font-size: 1rem;
     line-height: 5px;
@@ -25349,28 +25349,28 @@ pre {
 
 .btn .btn-label.btn-label-left,
 .ajax-upload-dragdrop .ajax-file-upload .btn-label.btn-label-left,
-.swal2-modal .swal2-buttonswrapper .swal2-styled .btn-label.btn-label-left,
+.swal32-modal .swal32-buttonswrapper .swal32-styled .btn-label.btn-label-left,
 .wizard > .actions a .btn-label.btn-label-left {
     margin-right: 5px;
 }
 
 .btn .btn-label.btn-label-right,
 .ajax-upload-dragdrop .ajax-file-upload .btn-label.btn-label-right,
-.swal2-modal .swal2-buttonswrapper .swal2-styled .btn-label.btn-label-right,
+.swal32-modal .swal32-buttonswrapper .swal32-styled .btn-label.btn-label-right,
 .wizard > .actions a .btn-label.btn-label-right {
     margin-left: 5px;
 }
 
 .btn.btn-rounded,
 .ajax-upload-dragdrop .btn-rounded.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-rounded.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-rounded.swal32-styled,
 .wizard > .actions a.btn-rounded {
     border-radius: 50px;
 }
 
 .btn.btn-icons,
 .ajax-upload-dragdrop .btn-icons.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-icons.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-icons.swal32-styled,
 .wizard > .actions a.btn-icons {
     width: 40px;
     height: 40px;
@@ -25381,7 +25381,7 @@ pre {
 
 .btn.btn-icons i,
 .ajax-upload-dragdrop .btn-icons.ajax-file-upload i,
-.swal2-modal .swal2-buttonswrapper .btn-icons.swal2-styled i,
+.swal32-modal .swal32-buttonswrapper .btn-icons.swal32-styled i,
 .wizard > .actions a.btn-icons i {
     margin: auto;
     line-height: initial;
@@ -25389,28 +25389,28 @@ pre {
 
 .btn.btn-fw,
 .ajax-upload-dragdrop .btn-fw.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-fw.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-fw.swal32-styled,
 .wizard > .actions a.btn-fw {
     min-width: 120px;
 }
 
 .btn.icon-btn i,
 .ajax-upload-dragdrop .icon-btn.ajax-file-upload i,
-.swal2-modal .swal2-buttonswrapper .icon-btn.swal2-styled i,
+.swal32-modal .swal32-buttonswrapper .icon-btn.swal32-styled i,
 .wizard > .actions a.icon-btn i {
     margin-right: 0;
 }
 
 .btn.social-btn,
 .ajax-upload-dragdrop .social-btn.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .social-btn.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .social-btn.swal32-styled,
 .wizard > .actions a.social-btn {
     padding: 13px;
 }
 
 .btn.social-btn i,
 .ajax-upload-dragdrop .social-btn.ajax-file-upload i,
-.swal2-modal .swal2-buttonswrapper .social-btn.swal2-styled i,
+.swal32-modal .swal32-buttonswrapper .social-btn.swal32-styled i,
 .wizard > .actions a.social-btn i {
     margin-right: 0;
     font-size: 1rem;
@@ -25419,10 +25419,10 @@ pre {
 .btn.btn-sm,
 .btn-group-sm > .btn,
 .ajax-upload-dragdrop .btn-group-sm > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-sm > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-sm > .swal32-styled,
 .wizard > .actions .btn-group-sm > a,
 .ajax-upload-dragdrop .btn-sm.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-sm.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-sm.swal32-styled,
 .wizard > .actions a.btn-sm {
     font-size: 0.875rem;
 }
@@ -25430,10 +25430,10 @@ pre {
 .btn.btn-lg,
 .btn-group-lg > .btn,
 .ajax-upload-dragdrop .btn-group-lg > .ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-group-lg > .swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group-lg > .swal32-styled,
 .wizard > .actions .btn-group-lg > a,
 .ajax-upload-dragdrop .btn-lg.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-lg.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-lg.swal32-styled,
 .wizard > .actions a.btn-lg {
     font-size: 0.875rem;
 }
@@ -25444,11 +25444,11 @@ pre {
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-submit,
 .ajax-upload-dragdrop .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-file-upload.editable-cancel,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-cancel,
-.swal2-modal .swal2-buttonswrapper .btn-xs.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-submit,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-submit,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-cancel,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-cancel,
+.swal32-modal .swal32-buttonswrapper .btn-xs.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-submit,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-submit,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-cancel,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-cancel,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .btn.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .wizard > .actions a.editable-submit,
 .wizard > .actions .editable-container.editable-inline .editableform .control-group .editable-buttons a.editable-submit,
@@ -25462,37 +25462,37 @@ pre {
 
 .btn.btn-danger,
 .ajax-upload-dragdrop .btn-danger.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-danger.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-danger.swal32-styled,
 .wizard > .actions a.btn-danger,
 .btn.btn-info,
 .ajax-upload-dragdrop .btn-info.ajax-file-upload,
 .ajax-upload-dragdrop .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-file-upload.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-submit,
-.swal2-modal .swal2-buttonswrapper .btn-info.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-submit,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-submit,
+.swal32-modal .swal32-buttonswrapper .btn-info.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-submit,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .btn.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .wizard > .actions a.editable-submit,
 .wizard > .actions .editable-container.editable-inline .editableform .control-group .editable-buttons a.editable-submit,
 .wizard > .actions a.btn-info,
 .btn.btn-success,
 .ajax-upload-dragdrop .btn-success.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-success.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-success.swal32-styled,
 .wizard > .actions a.btn-success,
 .btn.btn-teal,
 .ajax-upload-dragdrop .btn-teal.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-teal.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-teal.swal32-styled,
 .wizard > .actions a.btn-teal,
 .btn.btn-warning,
 .ajax-upload-dragdrop .btn-warning.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-warning.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-warning.swal32-styled,
 .wizard > .actions a.btn-warning {
     color: #ffffff;
 }
 
 .btn.btn-outline-light,
 .ajax-upload-dragdrop .btn-outline-light.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-outline-light.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-outline-light.swal32-styled,
 .wizard > .actions a.btn-outline-light {
     border-color: #cbdcdc;
     color: #cbdcdc;
@@ -25500,14 +25500,14 @@ pre {
 
 .btn.btn-outline-secondary,
 .ajax-upload-dragdrop .btn-outline-secondary.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-outline-secondary.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-outline-secondary.swal32-styled,
 .wizard > .actions a.btn-outline-secondary {
     color: rgba(0, 0, 0, 0.5);
 }
 
 .btn.btn-inverse-secondary,
 .ajax-upload-dragdrop .btn-inverse-secondary.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-inverse-secondary.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-inverse-secondary.swal32-styled,
 .wizard > .actions a.btn-inverse-secondary {
     background-color: rgba(227, 232, 232, 0.5);
     color: rgba(0, 0, 0, 0.5);
@@ -25515,14 +25515,14 @@ pre {
 
 .btn.btn-inverse-secondary:hover,
 .ajax-upload-dragdrop .btn-inverse-secondary.ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .btn-inverse-secondary.swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .btn-inverse-secondary.swal32-styled:hover,
 .wizard > .actions a.btn-inverse-secondary:hover {
     color: rgba(0, 0, 0, 0.5);
 }
 
 .btn.btn-inverse-light,
 .ajax-upload-dragdrop .btn-inverse-light.ajax-file-upload,
-.swal2-modal .swal2-buttonswrapper .btn-inverse-light.swal2-styled,
+.swal32-modal .swal32-buttonswrapper .btn-inverse-light.swal32-styled,
 .wizard > .actions a.btn-inverse-light {
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.5);
@@ -25531,7 +25531,7 @@ pre {
 
 .btn.btn-inverse-light:hover,
 .ajax-upload-dragdrop .btn-inverse-light.ajax-file-upload:hover,
-.swal2-modal .swal2-buttonswrapper .btn-inverse-light.swal2-styled:hover,
+.swal32-modal .swal32-buttonswrapper .btn-inverse-light.swal32-styled:hover,
 .wizard > .actions a.btn-inverse-light:hover {
     color: rgba(0, 0, 0, 0.5);
     border-color: #d9d9d9;
@@ -25545,8 +25545,8 @@ pre {
 .btn-group .btn,
 .btn-group .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .swal32-styled,
 .btn-group .wizard > .actions a,
 .wizard > .actions .btn-group a {
     border-top: none;
@@ -25557,8 +25557,8 @@ pre {
 .btn-group .btn:last-child,
 .btn-group .ajax-upload-dragdrop .ajax-file-upload:last-child,
 .ajax-upload-dragdrop .btn-group .ajax-file-upload:last-child,
-.btn-group .swal2-modal .swal2-buttonswrapper .swal2-styled:last-child,
-.swal2-modal .swal2-buttonswrapper .btn-group .swal2-styled:last-child,
+.btn-group .swal32-modal .swal32-buttonswrapper .swal32-styled:last-child,
+.swal32-modal .swal32-buttonswrapper .btn-group .swal32-styled:last-child,
 .btn-group .wizard > .actions a:last-child,
 .wizard > .actions .btn-group a:last-child {
     border-right: none;
@@ -25569,14 +25569,14 @@ pre {
 .ajax-upload-dragdrop .btn-group .btn-primary.ajax-file-upload,
 .btn-group .ajax-upload-dragdrop .wizard > .actions a.ajax-file-upload,
 .ajax-upload-dragdrop .wizard > .actions .btn-group a.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-primary.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-primary.swal2-styled,
-.btn-group .swal2-modal .swal2-buttonswrapper .wizard > .actions a.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .wizard > .actions .btn-group a.swal2-styled,
-.btn-group .wizard > .actions .swal2-modal .swal2-buttonswrapper a.swal2-styled.swal2-confirm,
-.wizard > .actions .swal2-modal .swal2-buttonswrapper .btn-group a.swal2-styled.swal2-confirm,
-.btn-group .wizard > .actions .swal2-modal .swal2-buttonswrapper a.swal2-styled.swal2-cancel,
-.wizard > .actions .swal2-modal .swal2-buttonswrapper .btn-group a.swal2-styled.swal2-cancel,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-primary.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-primary.swal32-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .wizard > .actions a.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .wizard > .actions .btn-group a.swal32-styled,
+.btn-group .wizard > .actions .swal32-modal .swal32-buttonswrapper a.swal32-styled.swal32-confirm,
+.wizard > .actions .swal32-modal .swal32-buttonswrapper .btn-group a.swal32-styled.swal32-confirm,
+.btn-group .wizard > .actions .swal32-modal .swal32-buttonswrapper a.swal32-styled.swal32-cancel,
+.wizard > .actions .swal32-modal .swal32-buttonswrapper .btn-group a.swal32-styled.swal32-cancel,
 .btn-group .wizard > .actions a,
 .wizard > .actions .btn-group a {
     border-color: #1794ff;
@@ -25589,12 +25589,12 @@ pre {
 .ajax-upload-dragdrop .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .ajax-file-upload.editable-cancel,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-cancel,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .btn-group .ajax-file-upload.editable-cancel,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-secondary.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-secondary.swal2-styled,
-.btn-group .swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-cancel,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .swal2-styled.editable-cancel,
-.btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-cancel,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .btn-group .swal2-styled.editable-cancel,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-secondary.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-secondary.swal32-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-cancel,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .swal32-styled.editable-cancel,
+.btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-cancel,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .btn-group .swal32-styled.editable-cancel,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .btn.editable-cancel,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .btn.editable-cancel,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .wizard > .actions a.editable-cancel,
@@ -25613,12 +25613,12 @@ pre {
 .ajax-upload-dragdrop .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .ajax-file-upload.editable-submit,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .btn-group .ajax-file-upload.editable-submit,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-info.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-info.swal2-styled,
-.btn-group .swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-submit,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .swal2-styled.editable-submit,
-.btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-submit,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .btn-group .swal2-styled.editable-submit,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-info.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-info.swal32-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-submit,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .swal32-styled.editable-submit,
+.btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-submit,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .btn-group .swal32-styled.editable-submit,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .btn.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .btn-group .btn.editable-submit,
 .btn-group .editable-container.editable-inline .editableform .control-group .editable-buttons .wizard > .actions a.editable-submit,
@@ -25633,8 +25633,8 @@ pre {
 .btn-group .btn.btn-warning,
 .btn-group .ajax-upload-dragdrop .btn-warning.ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .btn-warning.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-warning.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-warning.swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-warning.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-warning.swal32-styled,
 .btn-group .wizard > .actions a.btn-warning,
 .wizard > .actions .btn-group a.btn-warning {
     border-color: #feb438;
@@ -25643,8 +25643,8 @@ pre {
 .btn-group .btn.btn-success,
 .btn-group .ajax-upload-dragdrop .btn-success.ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .btn-success.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-success.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-success.swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-success.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-success.swal32-styled,
 .btn-group .wizard > .actions a.btn-success,
 .wizard > .actions .btn-group a.btn-success {
     border-color: #0bbc84;
@@ -25653,8 +25653,8 @@ pre {
 .btn-group .btn.btn-danger,
 .btn-group .ajax-upload-dragdrop .btn-danger.ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .btn-danger.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-danger.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-danger.swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-danger.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-danger.swal32-styled,
 .btn-group .wizard > .actions a.btn-danger,
 .wizard > .actions .btn-group a.btn-danger {
     border-color: #f05551;
@@ -25663,8 +25663,8 @@ pre {
 .btn-group .btn.btn-dark,
 .btn-group .ajax-upload-dragdrop .btn-dark.ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .btn-dark.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-dark.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-dark.swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-dark.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-dark.swal32-styled,
 .btn-group .wizard > .actions a.btn-dark,
 .wizard > .actions .btn-group a.btn-dark {
     border-color: #1d1c21;
@@ -25673,8 +25673,8 @@ pre {
 .btn-group .btn.btn-light,
 .btn-group .ajax-upload-dragdrop .btn-light.ajax-file-upload,
 .ajax-upload-dragdrop .btn-group .btn-light.ajax-file-upload,
-.btn-group .swal2-modal .swal2-buttonswrapper .btn-light.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .btn-group .btn-light.swal2-styled,
+.btn-group .swal32-modal .swal32-buttonswrapper .btn-light.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .btn-group .btn-light.swal32-styled,
 .btn-group .wizard > .actions a.btn-light,
 .wizard > .actions .btn-group a.btn-light {
     border-color: #f0f5f5;
@@ -27357,7 +27357,7 @@ pre {
 
 .form-control,
 .asColorPicker-input,
-.dataTables_wrapper select,
+.datables43_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select,
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
@@ -27376,7 +27376,7 @@ pre {
 
 .form-control.form-control-lg,
 .form-control-lg.asColorPicker-input,
-.dataTables_wrapper select.form-control-lg,
+.datables43_wrapper select.form-control-lg,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.form-control-lg[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.form-control-lg,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.form-control-lg[type=number],
@@ -27390,7 +27390,7 @@ pre {
 
 .form-control.form-control-sm,
 .form-control-sm.asColorPicker-input,
-.dataTables_wrapper select.form-control-sm,
+.datables43_wrapper select.form-control-sm,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.form-control-sm[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row select.form-control-sm,
 .jsgrid .jsgrid-table .jsgrid-filter-row input.form-control-sm[type=number],
@@ -27404,7 +27404,7 @@ pre {
 
 select.form-control,
 select.asColorPicker-input,
-.dataTables_wrapper select,
+.datables43_wrapper select,
 .jsgrid .jsgrid-table .jsgrid-filter-row select,
 .select2-container--default select.select2-selection--single,
 .select2-container--default .select2-selection--single select.select2-search__field,
@@ -27422,8 +27422,8 @@ select.typeahead {
 
 .form-group.has-danger .form-control,
 .form-group.has-danger .asColorPicker-input,
-.form-group.has-danger .dataTables_wrapper select,
-.dataTables_wrapper .form-group.has-danger select,
+.form-group.has-danger .datables43_wrapper select,
+.datables43_wrapper .form-group.has-danger select,
 .form-group.has-danger .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .form-group.has-danger input[type=text],
 .form-group.has-danger .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -28606,16 +28606,16 @@ ul li {
 .ajax-upload-dragdrop .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .ajax-file-upload.editable-cancel,
 .new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .ajax-file-upload.editable-cancel,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .ajax-upload-dragdrop .new-accounts ul.chats li.chat-persons .ajax-file-upload.editable-cancel,
-.new-accounts ul.chats li.chat-persons .swal2-modal .swal2-buttonswrapper .btn-xs.swal2-styled,
-.swal2-modal .swal2-buttonswrapper .new-accounts ul.chats li.chat-persons .btn-xs.swal2-styled,
-.new-accounts ul.chats li.chat-persons .swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-submit,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .swal2-styled.editable-submit,
-.new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-submit,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .new-accounts ul.chats li.chat-persons .swal2-styled.editable-submit,
-.new-accounts ul.chats li.chat-persons .swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-styled.editable-cancel,
-.swal2-modal .swal2-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .swal2-styled.editable-cancel,
-.new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .swal2-styled.editable-cancel,
-.editable-container.editable-inline .editableform .control-group .editable-buttons .swal2-modal .swal2-buttonswrapper .new-accounts ul.chats li.chat-persons .swal2-styled.editable-cancel,
+.new-accounts ul.chats li.chat-persons .swal32-modal .swal32-buttonswrapper .btn-xs.swal32-styled,
+.swal32-modal .swal32-buttonswrapper .new-accounts ul.chats li.chat-persons .btn-xs.swal32-styled,
+.new-accounts ul.chats li.chat-persons .swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-submit,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .swal32-styled.editable-submit,
+.new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-submit,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .new-accounts ul.chats li.chat-persons .swal32-styled.editable-submit,
+.new-accounts ul.chats li.chat-persons .swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-styled.editable-cancel,
+.swal32-modal .swal32-buttonswrapper .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .swal32-styled.editable-cancel,
+.new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .swal32-styled.editable-cancel,
+.editable-container.editable-inline .editableform .control-group .editable-buttons .swal32-modal .swal32-buttonswrapper .new-accounts ul.chats li.chat-persons .swal32-styled.editable-cancel,
 .new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .btn.editable-submit,
 .editable-container.editable-inline .editableform .control-group .editable-buttons .new-accounts ul.chats li.chat-persons .btn.editable-submit,
 .new-accounts ul.chats li.chat-persons .editable-container.editable-inline .editableform .control-group .editable-buttons .wizard > .actions a.editable-submit,
@@ -30612,8 +30612,8 @@ ul li {
 .add-items .btn,
 .add-items .ajax-upload-dragdrop .ajax-file-upload,
 .ajax-upload-dragdrop .add-items .ajax-file-upload,
-.add-items .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .add-items .swal2-styled,
+.add-items .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .add-items .swal32-styled,
 .add-items .wizard > .actions a,
 .wizard > .actions .add-items a {
     border-top-left-radius: 0;
@@ -32276,77 +32276,77 @@ body.avgrund-active {
 }
 
 /* Data Tables */
-.dataTables_wrapper {
+.datables43_wrapper {
     padding-left: 0;
     padding-right: 0;
 }
 
-.dataTables_wrapper label {
+.datables43_wrapper label {
     font-size: 0.8125rem;
 }
 
-.dataTables_wrapper select {
+.datables43_wrapper select {
     padding: 0.4rem;
 }
 
-.dataTables_wrapper .dataTables_length select {
+.datables43_wrapper .datables43_length select {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
 
-.dataTables_wrapper .dataTable {
+.datables43_wrapper .dataTable {
     border-collapse: collapse;
 }
 
-.dataTables_wrapper .dataTable .btn,
-.dataTables_wrapper .dataTable .ajax-upload-dragdrop .ajax-file-upload,
-.ajax-upload-dragdrop .dataTables_wrapper .dataTable .ajax-file-upload,
-.dataTables_wrapper .dataTable .swal2-modal .swal2-buttonswrapper .swal2-styled,
-.swal2-modal .swal2-buttonswrapper .dataTables_wrapper .dataTable .swal2-styled,
-.dataTables_wrapper .dataTable .wizard > .actions a,
-.wizard > .actions .dataTables_wrapper .dataTable a {
+.datables43_wrapper .dataTable .btn,
+.datables43_wrapper .dataTable .ajax-upload-dragdrop .ajax-file-upload,
+.ajax-upload-dragdrop .datables43_wrapper .dataTable .ajax-file-upload,
+.datables43_wrapper .dataTable .swal32-modal .swal32-buttonswrapper .swal32-styled,
+.swal32-modal .swal32-buttonswrapper .datables43_wrapper .dataTable .swal32-styled,
+.datables43_wrapper .dataTable .wizard > .actions a,
+.wizard > .actions .datables43_wrapper .dataTable a {
     padding: 0.1rem 1rem;
     vertical-align: top;
 }
 
-.dataTables_wrapper .dataTable thead .sorting:after,
-.dataTables_wrapper .dataTable thead .sorting:before,
-.dataTables_wrapper .dataTable thead .sorting_asc:after,
-.dataTables_wrapper .dataTable thead .sorting_asc:before,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
-.dataTables_wrapper .dataTable thead .sorting_desc:after,
-.dataTables_wrapper .dataTable thead .sorting_desc:before,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
+.datables43_wrapper .dataTable thead .sorting:after,
+.datables43_wrapper .dataTable thead .sorting:before,
+.datables43_wrapper .dataTable thead .sorting_asc:after,
+.datables43_wrapper .dataTable thead .sorting_asc:before,
+.datables43_wrapper .dataTable thead .sorting_asc_disabled:after,
+.datables43_wrapper .dataTable thead .sorting_asc_disabled:before,
+.datables43_wrapper .dataTable thead .sorting_desc:after,
+.datables43_wrapper .dataTable thead .sorting_desc:before,
+.datables43_wrapper .dataTable thead .sorting_desc_disabled:after,
+.datables43_wrapper .dataTable thead .sorting_desc_disabled:before {
     line-height: 2.5;
     font-family: Material Design Icons;
     font-size: 0.65rem;
 }
 
-.dataTables_wrapper .dataTable thead .sorting:before,
-.dataTables_wrapper .dataTable thead .sorting_asc:before,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
-.dataTables_wrapper .dataTable thead .sorting_desc:before,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
+.datables43_wrapper .dataTable thead .sorting:before,
+.datables43_wrapper .dataTable thead .sorting_asc:before,
+.datables43_wrapper .dataTable thead .sorting_asc_disabled:before,
+.datables43_wrapper .dataTable thead .sorting_desc:before,
+.datables43_wrapper .dataTable thead .sorting_desc_disabled:before {
     content: "\F05D";
     right: 1.2em;
 }
 
-.dataTables_wrapper .dataTable thead .sorting:after,
-.dataTables_wrapper .dataTable thead .sorting_asc:after,
-.dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
-.dataTables_wrapper .dataTable thead .sorting_desc:after,
-.dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
+.datables43_wrapper .dataTable thead .sorting:after,
+.datables43_wrapper .dataTable thead .sorting_asc:after,
+.datables43_wrapper .dataTable thead .sorting_asc_disabled:after,
+.datables43_wrapper .dataTable thead .sorting_desc:after,
+.datables43_wrapper .dataTable thead .sorting_desc_disabled:after {
     content: "\F045";
     right: 0.2em;
 }
 
-.dataTables_wrapper .dataTables_paginate {
+.datables43_wrapper .datables43_paginate {
     margin-top: 20px;
 }
 
-.dataTables_wrapper .dataTables_info {
+.datables43_wrapper .datables43_info {
     font-size: 14px;
 }
 
@@ -32556,10 +32556,10 @@ body.avgrund-active {
 .datepicker.asColorPicker-wrap .form-control,
 .datepicker.input-group .asColorPicker-input,
 .datepicker.asColorPicker-wrap .asColorPicker-input,
-.datepicker.input-group .dataTables_wrapper select,
-.dataTables_wrapper .datepicker.input-group select,
-.datepicker.asColorPicker-wrap .dataTables_wrapper select,
-.dataTables_wrapper .datepicker.asColorPicker-wrap select,
+.datepicker.input-group .datables43_wrapper select,
+.datables43_wrapper .datepicker.input-group select,
+.datepicker.asColorPicker-wrap .datables43_wrapper select,
+.datables43_wrapper .datepicker.asColorPicker-wrap select,
 .datepicker.input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .datepicker.input-group input[type=text],
 .datepicker.asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
@@ -33585,11 +33585,11 @@ body.avgrund-active {
 }
 
 /* SweetAlert */
-.swal2-container {
+.swal32-container {
     z-index: 1500;
 }
 
-.swal2-modal {
+.swal32-modal {
     min-height: 315px;
     -webkit-align-items: center;
     align-items: center;
@@ -33600,7 +33600,7 @@ body.avgrund-active {
     border-radius: 10px;
 }
 
-.swal2-modal .swal2-title {
+.swal32-modal .swal32-title {
     font-size: 25px;
     line-height: 1;
     font-family: "Muli", sans-serif;
@@ -33609,30 +33609,30 @@ body.avgrund-active {
     margin-bottom: 0;
 }
 
-.swal2-modal .swal2-icon,
-.swal2-modal .swal2-success-ring {
+.swal32-modal .swal32-icon,
+.swal32-modal .swal32-success-ring {
     margin-top: 0;
     margin-bottom: 42px;
 }
 
-.swal2-modal .swal2-buttonswrapper {
+.swal32-modal .swal32-buttonswrapper {
     margin-top: 0;
     padding: 0;
 }
 
-.swal2-modal .swal2-buttonswrapper .swal2-styled {
+.swal32-modal .swal32-buttonswrapper .swal32-styled {
     margin-top: 0;
     font-weight: initial;
 }
 
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm {
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-confirm {
     background-color: #0cca8e;
     border: 1px solid #0cca8e;
     font-weight: initial;
     margin-top: 32px;
 }
 
-.swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel {
+.swal32-modal .swal32-buttonswrapper .swal32-styled.swal32-cancel {
     margin-top: 32px;
     background-color: #ffffff;
     border: 1px solid #f2f2f2;
@@ -33640,7 +33640,7 @@ body.avgrund-active {
     font-weight: initial;
 }
 
-.swal2-modal .swal2-content {
+.swal32-modal .swal32-content {
     font-size: 14px;
     font-family: "Muli", sans-serif;
     color: #212529;
@@ -33648,11 +33648,11 @@ body.avgrund-active {
     margin-top: 11px;
 }
 
-.swal2-modal .swal2-close {
+.swal32-modal .swal32-close {
     font-size: 20px;
 }
 
-.swal2-modal .swal2-success-ring {
+.swal32-modal .swal32-success-ring {
     left: -30px;
 }
 
@@ -33976,8 +33976,8 @@ div.tagsinput span.tag a {
 
 .editable-container.editable-inline .editableform .control-group .editable-input .combodate .form-control,
 .editable-container.editable-inline .editableform .control-group .editable-input .combodate .asColorPicker-input,
-.editable-container.editable-inline .editableform .control-group .editable-input .combodate .dataTables_wrapper select,
-.dataTables_wrapper .editable-container.editable-inline .editableform .control-group .editable-input .combodate select,
+.editable-container.editable-inline .editableform .control-group .editable-input .combodate .datables43_wrapper select,
+.datables43_wrapper .editable-container.editable-inline .editableform .control-group .editable-input .combodate select,
 .editable-container.editable-inline .editableform .control-group .editable-input .combodate .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .editable-container.editable-inline .editableform .control-group .editable-input .combodate input[type=text],
 .editable-container.editable-inline .editableform .control-group .editable-input .combodate .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -34402,10 +34402,10 @@ div.tagsinput span.tag a {
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .form-control,
 .auth.theme-one .auto-form-wrapper .form-group .input-group .asColorPicker-input,
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .asColorPicker-input,
-.auth.theme-one .auto-form-wrapper .form-group .input-group .dataTables_wrapper select,
-.dataTables_wrapper .auth.theme-one .auto-form-wrapper .form-group .input-group select,
-.auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .dataTables_wrapper select,
-.dataTables_wrapper .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap select,
+.auth.theme-one .auto-form-wrapper .form-group .input-group .datables43_wrapper select,
+.datables43_wrapper .auth.theme-one .auto-form-wrapper .form-group .input-group select,
+.auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .datables43_wrapper select,
+.datables43_wrapper .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap select,
 .auth.theme-one .auto-form-wrapper .form-group .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .auth.theme-one .auto-form-wrapper .form-group .input-group input[type=text],
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
@@ -34441,10 +34441,10 @@ div.tagsinput span.tag a {
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .form-control:focus,
 .auth.theme-one .auto-form-wrapper .form-group .input-group .asColorPicker-input:focus,
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .asColorPicker-input:focus,
-.auth.theme-one .auto-form-wrapper .form-group .input-group .dataTables_wrapper select:focus,
-.dataTables_wrapper .auth.theme-one .auto-form-wrapper .form-group .input-group select:focus,
-.auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .dataTables_wrapper select:focus,
-.dataTables_wrapper .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap select:focus,
+.auth.theme-one .auto-form-wrapper .form-group .input-group .datables43_wrapper select:focus,
+.datables43_wrapper .auth.theme-one .auto-form-wrapper .form-group .input-group select:focus,
+.auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .datables43_wrapper select:focus,
+.datables43_wrapper .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap select:focus,
 .auth.theme-one .auto-form-wrapper .form-group .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .auth.theme-one .auto-form-wrapper .form-group .input-group input:focus[type=text],
 .auth.theme-one .auto-form-wrapper .form-group .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
@@ -34627,10 +34627,10 @@ div.tagsinput span.tag a {
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .form-control,
 .auth.theme-two .auto-form-wrapper form .form-group .input-group .asColorPicker-input,
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .asColorPicker-input,
-.auth.theme-two .auto-form-wrapper form .form-group .input-group .dataTables_wrapper select,
-.dataTables_wrapper .auth.theme-two .auto-form-wrapper form .form-group .input-group select,
-.auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .dataTables_wrapper select,
-.dataTables_wrapper .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap select,
+.auth.theme-two .auto-form-wrapper form .form-group .input-group .datables43_wrapper select,
+.datables43_wrapper .auth.theme-two .auto-form-wrapper form .form-group .input-group select,
+.auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .datables43_wrapper select,
+.datables43_wrapper .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap select,
 .auth.theme-two .auto-form-wrapper form .form-group .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .auth.theme-two .auto-form-wrapper form .form-group .input-group input[type=text],
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
@@ -34666,10 +34666,10 @@ div.tagsinput span.tag a {
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .form-control:focus,
 .auth.theme-two .auto-form-wrapper form .form-group .input-group .asColorPicker-input:focus,
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .asColorPicker-input:focus,
-.auth.theme-two .auto-form-wrapper form .form-group .input-group .dataTables_wrapper select:focus,
-.dataTables_wrapper .auth.theme-two .auto-form-wrapper form .form-group .input-group select:focus,
-.auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .dataTables_wrapper select:focus,
-.dataTables_wrapper .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap select:focus,
+.auth.theme-two .auto-form-wrapper form .form-group .input-group .datables43_wrapper select:focus,
+.datables43_wrapper .auth.theme-two .auto-form-wrapper form .form-group .input-group select:focus,
+.auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .datables43_wrapper select:focus,
+.datables43_wrapper .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap select:focus,
 .auth.theme-two .auto-form-wrapper form .form-group .input-group .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .auth.theme-two .auto-form-wrapper form .form-group .input-group input:focus[type=text],
 .auth.theme-two .auto-form-wrapper form .form-group .asColorPicker-wrap .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
@@ -35098,8 +35098,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .form-control,
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .asColorPicker-input,
-.horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .dataTables_wrapper select,
-.dataTables_wrapper .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field select,
+.horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .datables43_wrapper select,
+.datables43_wrapper .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field select,
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field input[type=text],
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -35122,8 +35122,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .form-control:focus,
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .asColorPicker-input:focus,
-.horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .dataTables_wrapper select:focus,
-.dataTables_wrapper .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field select:focus,
+.horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .datables43_wrapper select:focus,
+.datables43_wrapper .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field select:focus,
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field input:focus[type=text],
 .horizontal-menu .navbar.horizontal-layout .navbar-menu-wrapper .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,
@@ -35588,8 +35588,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input[type=text],
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select,
@@ -35612,8 +35612,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control:-ms-input-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input:-ms-input-placeholder,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select:-ms-input-placeholder,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:-ms-input-placeholder,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select:-ms-input-placeholder,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:-ms-input-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input:-ms-input-placeholder[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input:-ms-input-placeholder[type=text],
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select:-ms-input-placeholder,
@@ -35633,8 +35633,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control:-moz-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input:-moz-placeholder,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select:-moz-placeholder,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:-moz-placeholder,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select:-moz-placeholder,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:-moz-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input:-moz-placeholder[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input:-moz-placeholder[type=text],
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select:-moz-placeholder,
@@ -35654,8 +35654,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control::-moz-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input::-moz-placeholder,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select::-moz-placeholder,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select::-moz-placeholder,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select::-moz-placeholder,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select::-moz-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-moz-placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input[type=text]::-moz-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select::-moz-placeholder,
@@ -35675,8 +35675,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control::-webkit-input-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input::-webkit-input-placeholder,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select::-webkit-input-placeholder,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select::-webkit-input-placeholder,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select::-webkit-input-placeholder,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select::-webkit-input-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]::-webkit-input-placeholder,
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input[type=text]::-webkit-input-placeholder,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select::-webkit-input-placeholder,
@@ -35696,8 +35696,8 @@ div.tagsinput span.tag a {
 
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .form-control:focus,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .asColorPicker-input:focus,
-.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .dataTables_wrapper select:focus,
-.dataTables_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:focus,
+.horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .datables43_wrapper select:focus,
+.datables43_wrapper .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field select:focus,
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row input:focus[type=text],
 .jsgrid .jsgrid-table .jsgrid-filter-row .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field input:focus[type=text],
 .horizontal-menu-2 .navbar.horizontal-layout-2 .nav-bottom .navbar-nav .nav-item .search-field .jsgrid .jsgrid-table .jsgrid-filter-row select:focus,

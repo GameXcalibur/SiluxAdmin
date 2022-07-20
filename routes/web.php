@@ -37,6 +37,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/devices', [App\Http\Controllers\HomeController::class, 'getDevices'])->name('devices.get')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
     Route::post('/hub/get', [App\Http\Controllers\HomeController::class, 'getHubInfo'])->name('hub.get')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
     Route::post('/hub/schedule/get', [App\Http\Controllers\HomeController::class, 'getSchedule'])->name('hub.get.schedule')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+    Route::post('/hub/device/delete', [App\Http\Controllers\HomeController::class, 'deleteDevice'])->name('hub.delete.device')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
+
 
     Route::post('/hub/init', [App\Http\Controllers\HomeController::class, 'hubOverviewInit'])->name('hub.init')->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 

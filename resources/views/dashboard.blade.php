@@ -3,12 +3,41 @@
 @section('content')
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.min.css">
 
+
 <style>
+    th {text-align:center}
+table.dataTable thead th {
+    position: relative;
+    background-image: none !important;
+    text-align: center !important;
+}
+  
+table.dataTable thead th.sorting:after,
+table.dataTable thead th.sorting_asc:after,
+table.dataTable thead th.sorting_desc:after {
+    position: absolute !important;
+    top: 12px !important;
+    right: 8px !important;
+    display: block !important;
+    font-family: FontAwesome !important;
+}
+table.dataTable thead th.sorting:after {
+    content: "\f0dc" !important;
+    color: #ddd !important;
+    font-size: 0.8em !important;
+    padding-top: 0.12em !important;
+}
+table.dataTable thead th.sorting_asc:after {
+    content: "\f0de" !important;
+}
+table.dataTable thead th.sorting_desc:after {
+    content: "\f0dd" !important;
+}
 p{
     padding: 0;
     margin: 0;
@@ -148,6 +177,14 @@ p{
             .swal2-popup{
     width:60vmax !important;
 }
+        .refresh{
+            transition: transform .7s ease-in-out;
+        }
+        .refresh:hover{
+            transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+            opacity: 0.7;
+        }
 </style>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
@@ -210,10 +247,17 @@ p{
         <div class="row" id="allHubsDiv">
 
             @foreach ($hubs as $key => $hub)
-            <div data-live="Loading" data-hubser="{{$key}}" class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails('{{$hub['name']}}', '{{$key}}', this);">
+            <div data-live="Loading" data-hubser="{{$key}}" class="col-md-2" style="background: {{$hub['statusH']}}; border-radius: 10px; box-shadow: 5px 10px #888888; padding: 20px; margin: 5px; cursor: pointer; opacity: {{$hub['active'] == 'false' ? '0.7' : '1'}};" onclick="hubDetails(event, '{{$hub['name']}}', '{{$key}}', this);">
                 <div class="loader"></div>
-                
-                <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
+                <div class="row">
+                    <div class="col-10">
+                        <p style="font-size: 16px"><b>{{$hub['name']}}</b></p>
+                    </div>
+                    <div class="col-1">
+            
+                        <a onclick='this.offsetParent.offsetParent.getElementsByTagName("div")[0].style.display = "block"; getHubInitDetails(this.offsetParent.offsetParent.getAttribute("data-hubser"), this.offsetParent.offsetParent.getElementsByTagName("div")[0], this.offsetParent.offsetParent);' class="refresh" id="refreshButton" style="z-index: 2000;"><span class="material-symbols-outlined refresh">refresh</span></a>                    
+                    </div>
+                </div>
                 <p style="font-size: 8px"><b>Connecting..</b></p>
                 <hr>
                 
@@ -258,6 +302,55 @@ $( document ).ready(function() {
         liveInit();
 
 });
+function deleteDevice(hub, device){
+    var postObj = {
+        'hub': hub,
+        'device': device
+    };
+    Swal.fire({
+        title: 'Are You Sure?',
+        html: 'You can not undo this operation.',
+        icon: 'warning',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: 'Confirm',
+        denyButtonText: `Deny`,
+        showLoaderOnConfirm: true,
+        preConfirm: (login) => {
+            return fetch(`/hub/device/delete`,{
+                method: 'POST', // or 'PUT'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postObj),
+
+            })
+            .then(response => {
+                if (!response.ok) {
+                    Swal.fire('Server Error!', 'Please Contact Support.', 'error')
+                }
+                return response.json()
+            })
+            .catch(error => {
+                Swal.showValidationMessage(
+                `Request failed: ${error}`
+                )
+            })
+        },
+        allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+        console.log(result);
+
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            if(result.value.live)
+                Swal.fire('Deleted!', '', 'success')
+            else
+                Swal.fire('Unable To Delete!', 'No Response From The Hub.', 'error')
+
+        }
+    })
+}
 function viewSchedule(hub, device){
 
     document.getElementById("overlayLoader").style.display = "block";
@@ -379,7 +472,10 @@ $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e){
       $($.fn.dataTable.tables(true)).DataTable()
          .scroller.measure();
    });  
-function hubDetails(name, ser, context) {
+function hubDetails(event, name, ser, context) {
+    console.log(event);
+    if(event.target.className == "material-symbols-outlined refresh")
+        return;
   document.getElementById("popupHeading").innerHTML = name;
 
   var live = context.getAttribute('data-live');
@@ -425,6 +521,7 @@ $.ajax({
                     var allDevTable = $('#allDevTable').DataTable({
                     scrollY: '50vh',
                     scrollCollapse: true,
+                    "paging": false,
                 });
                 }, 200);
 

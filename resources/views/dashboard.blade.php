@@ -231,17 +231,34 @@ p{
 
     <div class="content-wrapper">
         <div class="row">
-            <span>
-                <span style="font-size: 28px; font-weight: bold;">Intellihubs | </span>
-                <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
-                <button type="button" onclick="liveInit();" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
-                <div class="search-container">
-                    <form action="/search" method="get">
-                        <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
-                        <label class="button searchbutton btn btn-warning btn-sm"  style="border-radius: 20px; height: 100%;" for="searchleft"><span style="font-size: 26px;" class="material-symbols-outlined">pageview</span></label>
-                    </form>
+                <div class="col-7">
+
+                    <span style="font-size: 28px; font-weight: bold;">Intellihubs | </span>
+                    <button type="button" class="btn btn-info btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">add_circle</span></button>
+                    <button type="button" onclick="liveInit();" class="btn btn-success btn-sm" style="border-radius: 20px;"><span class="material-symbols-outlined">change_circle</span></button>
+                    <div class="search-container">
+                        <form action="/search" method="get">
+                            <input class="search" id="searchleft" type="search" name="q" placeholder="Search">
+                            <label class="button searchbutton btn btn-warning btn-sm"  style="border-radius: 20px; height: 100%;" for="searchleft"><span style="font-size: 26px;" class="material-symbols-outlined">pageview</span></label>
+                        </form>
+                    </div>
                 </div>
-            </span>
+                <div class="col-2"></div>
+                <div class="col-3 justify-content-center">
+                    <p style="font-size: 20px"><b>Auto Refresh Timer</b></p>
+                    <select id="timerSelect" style="width: 100%" onchange="changeTimer(this)">
+                        <option value="5">5 Minutes</option>
+                        <option value="15">15 Minutes</option>
+                        <option value="30">30 Minutes</option>
+                        <option value="45">45 Minutes</option>
+                        <option value="1">1 Hour</option>
+                        <option value="2">2 Hours</option>
+                        <option value="3">3 Hours</option>
+
+                    </select>
+                    <p style="font-size: 10px"><b>Next Update In: </b><span id="timerHolder"></span></p>
+
+                </div>
         </div>
         <hr>
         <div class="row" id="allHubsDiv">
@@ -294,14 +311,54 @@ p{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-
+var setTimer = 60*5;
 $( document ).ready(function() {
+    $( "#allHubsDiv" ).sortable();
     $(".toggle-btn").click(function(){
         $("#myCollapsible").collapse('toggle');
     });
         liveInit();
+        display = document.querySelector('#timerHolder');
+        startTimer(setTimer, display);
 
 });
+var timerInterval = 0;
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    timerInterval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            liveInit();
+            timer = duration;
+        }
+    }, 1000);
+}
+function changeTimer(context){
+    switch(context.value){
+        case "15":
+        case "30":
+        case "45":
+        case "5":
+            setTimer = 60*context.value;
+            break;
+        case "1":
+        case "2":
+        case "3":
+            setTimer = 60*(context.value*60);
+            break;
+    }
+    clearInterval(timerInterval);
+    display = document.querySelector('#timerHolder');
+        startTimer(setTimer, display);
+
+}
 function deleteDevice(hub, device){
     var postObj = {
         'hub': hub,

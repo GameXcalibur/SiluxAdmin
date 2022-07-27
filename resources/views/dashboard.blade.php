@@ -185,6 +185,71 @@ p{
     transition: all 0.3s ease-in-out 0s;
             opacity: 0.7;
         }
+
+        .progress2 {
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.progress-bar2 {
+  height: 18px;
+  border-radius: 30px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+  background-color: #f3c623;
+  animation: progress 5s infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    background: #f9bcca;
+  }
+
+  100% {
+    width: 100%;
+    background: #f3c623;
+    box-shadow: 0 0 40px #f3c623;
+  }
+}
+
+.icon {
+  color: #f3c623;
+  animation: icon 5s infinite;
+  background-color: transparent;
+  padding-right: 400px;
+  padding-bottom: 20px;
+}
+
+@keyframes icon {
+  0% {
+    opacity: 0.2;
+    text-shadow: 0 0 0 #f3c623;
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #f3c623;
+  }
+}
+
+.loader2 {
+  --p: 0;
+  animation: p 5s steps(100) infinite;
+  counter-reset: p var(--p);
+  font-size: 2.1em;
+  position: absolute;
+  bottom: 45px;
+  left: 325px;
+  color: #f3c623;
+}
+
+.remove-animation {
+  animation: none !important;
+}
 </style>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
@@ -260,6 +325,22 @@ p{
 
                 </div>
         </div>
+            <div class="row">
+                <div class="col-md-3">
+                <span class="material-symbols-outlined ">wifi</span>
+                <span>Intellihub Status</span>
+                </div>
+                <div class="col-md-5 kustify-content-center">
+                <p id="statusText" style="width:100%; text-align: center;">Intellihub Status</p>
+                </div>
+
+
+            </div>
+
+            <div id="topProgDiv1" class="progress2 progress-moved remove-animation">
+                <div id="topProgDiv2" class="progress-bar2 remove-animation"></div>
+                <div id="topProgDiv3" class="loader2 remove-animation" style="--n: 1; --f: 0;"></div>
+            </div>
         <hr>
         <div class="row" id="allHubsDiv">
 
@@ -489,6 +570,11 @@ function myFunction(e) {
 
 }
 function getHubInitDetails(ser, loadContext, mainContext){
+    
+    document.getElementById("topProgDiv1").classList.remove("remove-animation");
+    document.getElementById("topProgDiv2").classList.remove("remove-animation");
+    document.getElementById("topProgDiv3").classList.remove("remove-animation");
+    document.getElementById("statusText").innerHTML = ser+": Contacting Intellihub";
     $.ajax({
     url: '/hub/init',
     type: 'post',
@@ -502,9 +588,11 @@ function getHubInitDetails(ser, loadContext, mainContext){
             console.log(feedback);
             if(feedback.status == "Online"){
                 mainContext.getElementsByTagName("p")[1].innerHTML = '<b>Live Data</b>';
+                document.getElementById("statusText").innerHTML = ser+": Connected To Intellihub";
 
             }else{
                 mainContext.getElementsByTagName("p")[1].innerHTML = '<b>Last Online Data - No Response From Hub</b>';
+                document.getElementById("statusText").innerHTML = ser+": Failed To Connect To Intellihub";
 
             }
             mainContext.style.background = feedback.statusH;
@@ -515,6 +603,9 @@ function getHubInitDetails(ser, loadContext, mainContext){
             mainContext.setAttribute('data-live', feedback.api_response);
 
             loadContext.style.display = "none";
+            document.getElementById("topProgDiv1").classList.add("remove-animation");
+            document.getElementById("topProgDiv2").classList.add("remove-animation");
+            document.getElementById("topProgDiv3").classList.add("remove-animation");
 
 
         });

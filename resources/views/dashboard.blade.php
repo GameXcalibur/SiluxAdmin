@@ -394,7 +394,7 @@ p{
 
 var setTimer = 60*5;
 $( document ).ready(function() {
-    $( "#allHubsDiv" ).sortable();
+    $( "#allHubsDiv" ).sortable({ helper: 'clone' });
     $(".toggle-btn").click(function(){
         $("#myCollapsible").collapse('toggle');
     });

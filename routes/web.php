@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/hubs', [App\Http\Controllers\HomeController::class, 'hubs'])->name('hubs');
 
     Route::get('/errors', [App\Http\Controllers\HomeController::class, 'errors'])->name('errors');
+    Route::get('/hubTest', [App\Http\Controllers\HomeController::class, 'hubTest'])->name('hubTest');
 
 
 

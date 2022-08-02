@@ -1223,31 +1223,35 @@ class HomeController extends Controller
 
 
         $allSchedules = [];
-        $hubResSchedules = $this->getProEMSchedules($data["hub"], $data["device"], 4);
-        if(str_contains($hubResSchedules, "IntelliHub not responding")){
-            $returnObj['status'] = FALSE;
-        }else{
+        $devSchedules = \DB::select('SELECT * FROM proEM_Schedules WHERE pSchedDSerial ="'.$data["device"].'"');
 
-            $returnObj['status'] = TRUE;
-            $returnObj['data'] = json_decode($hubResSchedules, true);
-
-
-            usleep(1000000);
-            $hubResSchedulesResponse = $this->getResponse($data["hub"], $data["device"],'getProEMSchedules');
-
-            $returnObj['dataRes'] = json_decode($hubResSchedulesResponse, true);
-
-            if(str_contains($returnObj['dataRes']['live_response'][0], "Processing")){
-                usleep(1000000);
-                $hubResSchedulesResponse = $this->getResponse($data["hub"], $data["device"],'getProEMSchedules');
-    
-                $returnObj['dataRes2'] = json_decode($hubResSchedulesResponse, true);
-            }
-
-
-
-
+        $returnObj['state'] = '1';
+        if(count($devSchedules) < 1){
+            $returnObj['state'] = '0';
         }
+
+
+        foreach($devSchedules as $devSchedule){
+            switch($devSchedule->pSchedIdx){
+                case 1:
+                    $returnObj['weekly'] = [];
+                    $returnObj['weekly']["days"] = [];
+                    $returnObj['weekly']["hour"] = sprintf("%02d", $devSchedule->pSchedHour);
+                    $returnObj['weekly']["mins"] = sprintf("%02d", $devSchedule->pSchedMin);
+                    $returnObj['weekly']["duration"] = sprintf("%02d", $devSchedule->pSchedDurB);
+
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                default:
+                    break;
+            }
+        }
+        //dd($devSchedules);
 
         return response()->json($returnObj);
 

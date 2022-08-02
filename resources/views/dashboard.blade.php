@@ -516,17 +516,26 @@ function viewSchedule(hub, device){
                 dayDrop += "<option>Sunday</option>";
                 dayDrop += "</select>";
 
-                var timeToAct = '<input type="time" id="appt" name="appt">';
-                var duration = '<input type="time" id="dur" name="dur">';
+                var timeBuild = feedback.weekly.hour+":"+feedback.weekly.mins;
+                var timeToAct = '<input type="time" id="appt" name="appt" value="'+timeBuild+'">';
+                var duration = '<input type="time" id="dur" name="dur" value="'+feedback.weekly.duration+':00">';
 
 
 
                 var dateHTML = dayDrop+timeToAct+duration;
 
+                var html = "";
+
+                if(feedback.state == "0"){
+                    html += "<b>NO SCHEDULES SET</b><br>";
+                }
+
+                html += '<input type="button" class="btn btn-primary btn-lg btn-block" value="Weekly" onclick="$(\'#myCollapsible\').collapse(\'toggle\');"><div id="myCollapsible" class="collapse hide">'+dateHTML+'</div><input type="button" class="btn btn-primary btn-lg btn-block" value="Monthly" onclick="$(\'#myCollapsible1\').collapse(\'toggle\');"><div id="myCollapsible1" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Bi Annually" onclick="$(\'#myCollapsible2\').collapse(\'toggle\');"><div id="myCollapsible2" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Annually" onclick="$(\'#myCollapsible3\').collapse(\'toggle\');"><div id="myCollapsible3" class="collapse hide"><p>No Schedules</p></div>';
+
                 document.getElementById("overlayLoader").style.display = "none";
                 Swal.fire({
                     title: 'ProEM Self Test Schedule',
-                    html: '<input type="button" class="btn btn-primary btn-lg btn-block" value="Weekly" onclick="$(\'#myCollapsible\').collapse(\'toggle\');"><div id="myCollapsible" class="collapse hide">'+dateHTML+'</div><input type="button" class="btn btn-primary btn-lg btn-block" value="Monthly" onclick="$(\'#myCollapsible1\').collapse(\'toggle\');"><div id="myCollapsible1" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Bi Annually" onclick="$(\'#myCollapsible2\').collapse(\'toggle\');"><div id="myCollapsible2" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Annually" onclick="$(\'#myCollapsible3\').collapse(\'toggle\');"><div id="myCollapsible3" class="collapse hide"><p>No Schedules</p></div>',
+                    html: html,
                     showDenyButton: true,
                     showCancelButton: true,
                     confirmButtonText: 'Save',

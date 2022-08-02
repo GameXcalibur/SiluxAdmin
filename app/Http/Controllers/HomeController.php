@@ -924,11 +924,12 @@ class HomeController extends Controller
           $schArr['w9t16'] = '255';
           $schArr['w1t8'] = '255';
       
-          $totalResponse['dummy_resp'] = $schArr;
+          $totalResponse['rawRes'] = $liveResponse;
       
       
       
           $respSplit = explode('=', $liveResponse);
+          
           array_splice($respSplit, 0, 1);
       
           $ints = bin2hex($liveResponse);
@@ -998,6 +999,8 @@ class HomeController extends Controller
           return $response;
         }
     }
+
+    
 
     function deviceListResponse($liveResponse, $hubSerial) {
         global $totalResponse;
@@ -1159,7 +1162,55 @@ class HomeController extends Controller
           array_push($hiMessages,"ss!".$hubSerial.",hl?pw=".$comsPass."&part=".$page."\n");
           return $this->socketHandler($hiMessages, $hubSerial);
 
-      }
+    }
+
+    function getProEMSchedules($hubSerial, $devSer, $schedID){
+        global $totalResponse;
+        $comsPass = \DB::select('SELECT coms_password FROM hubs WHERE hub_serial_no = "'.$hubSerial.'"')[0]->coms_password;
+      
+
+        $d = str_replace(' ', '', $devSer);
+        // $schedCmd = $_POST['schedCmd'];
+        $schedIdx = $schedID;
+        $hiMessages = ["u"];
+        array_push($hiMessages, "au?");
+        array_push($hiMessages,"ss!".$hubSerial.",sl?pw=".$comsPass."&".$d.",1," . chr(42) . chr($schedIdx));
+        return $this->socketHandler($hiMessages, $hubSerial);
+      
+    }
+
+    function getResponse($hubSerial, $devSer ,$command){
+
+        global $totalResponse;
+        $comsPass = \DB::select('SELECT coms_password FROM hubs WHERE hub_serial_no = "'.$hubSerial.'"')[0]->coms_password;
+
+        $serial = $devSer;
+
+
+        $cmdToSend = 7;
+        switch($command){
+        case 'onOff': $cmdToSend = 7; break;
+        case 'setGeyserSchedule': $cmdToSend = 42; break;
+        case 'setTollenoSchedule': $cmdToSend = 42; break;
+        case 'createEditProEMSelfTest': $cmdToSend = 42; break;
+        case 'getProEMSchedules': $cmdToSend = 42; break;
+        case 'getGensenseTemps': $cmdToSend = 44; break;
+        case 'getGeyserExtra': $cmdToSend = 44; break;
+        case 'getProEMExtra': $cmdToSend = 44; break;
+        case 'getPairedDevices': $cmdToSend = 44; break;
+        default: break;
+        }
+
+        $totalResponse = ['errors'=>''];
+        $totalResponse['sent'] = $serial . ' | ' . $command;
+
+
+        $hiMessages = ["u"];
+        array_push($hiMessages, "au?");
+        array_push($hiMessages,"ss!".$hubSerial.",sl?pw=".$comsPass."&".$serial.",250," . chr($cmdToSend) . chr(250));
+        return $this->socketHandler($hiMessages, $hubSerial);
+
+    }
 
     public function hubTest(){
         $response = $this->getDevicesS('823087088');
@@ -1169,35 +1220,29 @@ class HomeController extends Controller
     public function getSchedule(Request $request){
         $data = $request->all();
         $returnObj = [];
-        $data1 = [];
-        $data1['api_key'] = 'abcd132453wq069n';
-        $data1['hubSerial'] = $data["hub"];
-        $data1['devSerial'] = $data["device"];
 
-        $data1['cmd'] = 'getProEMSchedules';
-        $data1['index'] = 1;
 
         $allSchedules = [];
-        $hubResSchedules = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+        $hubResSchedules = $this->getProEMSchedules($data["hub"], $data["device"], 4);
         if(str_contains($hubResSchedules, "IntelliHub not responding")){
             $returnObj['status'] = FALSE;
         }else{
 
             $returnObj['status'] = TRUE;
             $returnObj['data'] = json_decode($hubResSchedules, true);
-            $returnObj['dataSent'] = $data1;
 
-            $data1 = [];
-            $data1['api_key'] = 'abcd132453wq069n';
-            $data1['hubSerial'] = $data["hub"];
-            $data1['devSerial'] = $data["device"];
-    
-            $data1['cmd'] = 'getResponse';
-            $data1['responseForCmdType'] = 'getProEMSchedules';
-            usleep(10000);
-            $hubResSchedulesResponse = $this->api("POST", "156.38.138.34/api/api_pass.php", $data1);
+
+            usleep(1000000);
+            $hubResSchedulesResponse = $this->getResponse($data["hub"], $data["device"],'getProEMSchedules');
 
             $returnObj['dataRes'] = json_decode($hubResSchedulesResponse, true);
+
+            if(str_contains($returnObj['dataRes']['live_response'][0], "Processing")){
+                usleep(1000000);
+                $hubResSchedulesResponse = $this->getResponse($data["hub"], $data["device"],'getProEMSchedules');
+    
+                $returnObj['dataRes2'] = json_decode($hubResSchedulesResponse, true);
+            }
 
 
 

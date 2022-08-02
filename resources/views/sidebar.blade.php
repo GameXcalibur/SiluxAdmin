@@ -37,13 +37,13 @@
 
 
 
-        <!-- <li class="nav-item">
-            <a class="nav-link" href="reports.php">
-                <i class="material-icons">description</i>
-                <span class="menu-title">Reports</span>
+        <li class="nav-item">
+            <a class="nav-link" onclick="backUp();">
+                <i class="material-icons">backup</i>
+                <span class="menu-title">Backup</span>
                 <div class="badge badge-success d-none"></div>
             </a>
-        </li> -->
+        </li>
 
         <!-- <li class="nav-item">
             <a class="nav-link" href="settings.php">
@@ -66,3 +66,24 @@
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+<script>
+function backUp(){
+    Swal.fire({
+        title: 'Backup',
+        html: 'Please select an option below',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Restore Last Backup',
+        denyButtonText: `Upload Current State To Backup`,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            Swal.fire('Changes are reverted', '', 'info')
+
+        } else if (result.isDenied) {
+            Swal.fire('Saved!', '', 'success')
+
+        }
+    })
+}
+</script>

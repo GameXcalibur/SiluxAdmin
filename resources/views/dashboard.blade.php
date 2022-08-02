@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="https://www.jqueryscript.net/demo/inline-week-day-picker/src/jquery-weekdays.css">
+
 
 
 <style>
@@ -42,6 +44,10 @@ p{
     padding: 0;
     margin: 0;
 }
+
+td {
+    padding: 0 20px;
+  }
 
 #overlay {
   text-align:center;
@@ -390,6 +396,8 @@ p{
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.jqueryscript.net/demo/inline-week-day-picker/src/jquery-weekdays.js"></script>
+
 <script>
 
 var setTimer = 60*5;
@@ -506,15 +514,10 @@ function viewSchedule(hub, device){
 
             const promise = new Promise((resolve, reject) => {
                 console.log(feedback);
-                var dayDrop = "<select>";
-                dayDrop += "<option>Monday</option>";
-                dayDrop += "<option>Tuesday</option>";
-                dayDrop += "<option>Wednesday</option>";
-                dayDrop += "<option>Thursday</option>";
-                dayDrop += "<option>Friday</option>";
-                dayDrop += "<option>Saturday</option>";
-                dayDrop += "<option>Sunday</option>";
-                dayDrop += "</select>";
+
+                
+                var dayDrop = '<div id="weekdays"> </div><script>$("#weekdays").weekdays();</script>';
+
 
                 var timeBuild = feedback.weekly.hour+":"+feedback.weekly.mins;
                 var timeToAct = '<input type="time" id="appt" name="appt" value="'+timeBuild+'">';
@@ -530,7 +533,40 @@ function viewSchedule(hub, device){
                     html += "<b>NO SCHEDULES SET</b><br>";
                 }
 
-                html += '<input type="button" class="btn btn-primary btn-lg btn-block" value="Weekly" onclick="$(\'#myCollapsible\').collapse(\'toggle\');"><div id="myCollapsible" class="collapse hide">'+dateHTML+'</div><input type="button" class="btn btn-primary btn-lg btn-block" value="Monthly" onclick="$(\'#myCollapsible1\').collapse(\'toggle\');"><div id="myCollapsible1" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Bi Annually" onclick="$(\'#myCollapsible2\').collapse(\'toggle\');"><div id="myCollapsible2" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Annually" onclick="$(\'#myCollapsible3\').collapse(\'toggle\');"><div id="myCollapsible3" class="collapse hide"><p>No Schedules</p></div>';
+                var weeklyTable = "<table style='text-align: center;'>";
+                weeklyTable += "<thead>";
+                weeklyTable += "<th>Days";
+                weeklyTable += "</th>";
+                weeklyTable += "<th>Time (24H)";
+                weeklyTable += "</th>";
+                weeklyTable += "<th>Duration (Minutes)";
+                weeklyTable += "</th>";
+
+                weeklyTable += "</thead>";
+                weeklyTable += "<tbody>";
+                weeklyTable += "<tr>";
+
+                weeklyTable += "<td>";
+                weeklyTable += dayDrop;
+
+                weeklyTable += "</td>";
+                weeklyTable += "<td>";
+                weeklyTable += timeToAct;
+
+                weeklyTable += "</td>";
+                weeklyTable += "<td>";
+                weeklyTable += duration;
+
+                weeklyTable += "</td>";
+
+                weeklyTable += "</tr>";
+                weeklyTable += "</tbody>";
+
+                weeklyTable += "</table>";
+
+
+
+                html += '<input type="button" class="btn btn-primary btn-lg btn-block" value="Weekly" onclick="$(\'#myCollapsible\').collapse(\'toggle\');"><div id="myCollapsible" class="collapse hide">'+weeklyTable+'</div><input type="button" class="btn btn-primary btn-lg btn-block" value="Monthly" onclick="$(\'#myCollapsible1\').collapse(\'toggle\');"><div id="myCollapsible1" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Bi Annually" onclick="$(\'#myCollapsible2\').collapse(\'toggle\');"><div id="myCollapsible2" class="collapse hide"><p>No Schedules</p></div><input type="button" class="btn btn-primary btn-lg btn-block" value="Annually" onclick="$(\'#myCollapsible3\').collapse(\'toggle\');"><div id="myCollapsible3" class="collapse hide"><p>No Schedules</p></div>';
 
                 document.getElementById("overlayLoader").style.display = "none";
                 Swal.fire({

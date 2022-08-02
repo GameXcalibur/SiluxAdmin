@@ -1179,6 +1179,54 @@ class HomeController extends Controller
       
     }
 
+    function hsbcCellReport(){
+
+
+        $hsbcCells = \DB::select('SELECT * FROM hsbc_cellNumber_link');
+        $fileName = 'tasks.csv';
+     
+             $headers = array(
+                 "Content-type"        => "text/csv",
+                 "Content-Disposition" => "attachment; filename=$fileName",
+                 "Pragma"              => "no-cache",
+                 "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+                 "Expires"             => "0"
+             );
+     
+             $columns = array('Hub Name', 'Hub Serial', 'Cell Number', 'Start Date', 'Expiry Date', 'Hub Assoc. Email');
+     
+             $callback = function() use($hsbcCells, $columns) {
+                 $file = fopen('php://output', 'w');
+                 fputcsv($file, $columns);
+     
+                 foreach($hsbcCells as $hsbcCell){
+                    $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$hsbcCell->hubSerialCell.'"');
+                    $hub_name = "No Name";
+                    $email = "No Email";
+        
+                    if($hubPerm){
+                        // /dd($hubPerm);
+                        $hub_name = $hubPerm[0]->hubName;
+                        $email = $hubPerm[0]->email;
+        
+                    }
+                     $row['Hub Name']  = $hub_name;
+                     $row['Hub Serial']    = $hsbcCell->hubSerialCell;
+                     $row['Cell Number']    = $hsbcCell->cellNumber;
+                     $row['Start Date']  = $hsbcCell->startDate;
+                     $row['Expiry Date']  = date('d F Y', strtotime($hsbcCell->startDate . " +1 year") );
+                     $row['Hub Assoc. Email']  = $email;
+
+     
+                     fputcsv($file, array($row['Hub Name'], $row['Hub Serial'], $row['Cell Number'], $row['Start Date'], $row['Expiry Date'], $row['Hub Assoc. Email']));
+                 }
+     
+                 fclose($file);
+             };
+     
+             return response()->stream($callback, 200, $headers);
+    }
+
     function getResponse($hubSerial, $devSer ,$command){
 
         global $totalResponse;

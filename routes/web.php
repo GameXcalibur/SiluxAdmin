@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'getUsers'])->name('users');
 
+Route::get('/cellRep', [App\Http\Controllers\HomeController::class, 'hsbcCellReport'])->name('cellRep');
+
+
 Route::post('/loginsil', [App\Http\Controllers\HomeController::class, 'login2'])->name('login.2');
 
 Route::get('/', function () {

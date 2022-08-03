@@ -516,7 +516,7 @@ function viewSchedule(hub, device){
                 console.log(feedback);
 
                 
-                var dayDrop = '<div id="weekdays"> </div><script>$("#weekdays").weekdays();</script>';
+                var dayDrop = '<div id="weekdays">';
 
 
                 var timeBuild = feedback.weekly.hour+":"+feedback.weekly.mins;
@@ -579,9 +579,9 @@ function viewSchedule(hub, device){
                 }).then((result) => {
                     /* Read more about isConfirmed, isDenied below */
                     if (result.isConfirmed) {
-                        Swal.fire('Saved!', '', 'success')
+                        Swal.fire('Saved!', '', 'success');
                     } else if (result.isDenied) {
-                        Swal.fire('Changes are not saved', '', 'info')
+                        Swal.fire('Changes are not saved', '', 'info');
                     }
                 })
 

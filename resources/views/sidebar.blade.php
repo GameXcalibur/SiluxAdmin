@@ -78,12 +78,12 @@ function backUp(){
     }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-            Swal.fire('Changes are reverted', '', 'info')
+            Swal.fire('Changes are reverted', '', 'info');
 
         } else if (result.isDenied) {
-            Swal.fire('Saved!', '', 'success')
+            Swal.fire('Saved!', '', 'success');
 
         }
-    })
+    });
 }
 </script>

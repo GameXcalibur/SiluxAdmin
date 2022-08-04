@@ -68,6 +68,25 @@ td {
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
 
+#overlay2 {
+  text-align:center;
+  vertical-align: middle;
+  
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Sit on top of the page content */
+
+  display: none;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
 .search-container {
 	position: relative;
 	display: inline-block;
@@ -257,6 +276,24 @@ td {
   animation: none !important;
 }
 </style>
+<div id="overlay2">
+    <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
+        <div class="row justify-content-center">
+            <h1 id="popupHeading" style="margin-top: 20px; text-decoration: underline;">REFRESH DEVICE STATUS OUTPUT</h1>
+            <p>OUTPUT WILL DISPLAY AS RECEIVED</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="loader" id="overlayLoader"></div>
+
+            <div class="col-md-11">
+                <p id="debugOutput"></p>
+            </div>
+        </div>
+      <div style="position: fixed; top: 10%; right:8%; width:15px;">
+        <button id="homeButton" type="button" class="btn btn-danger btn-circle" style="border-radius: 50px;" onclick="off1();"><span class="material-symbols-outlined">cancel</span></button>
+      </div>
+    </div>
+</div>
 <div id="overlay">
     <div style="width: 80%; height: 80%; background: #ccc; left: 15%; top: 10%; position: relative; border-radius: 20px;">
         <div class="row justify-content-center">
@@ -314,7 +351,7 @@ td {
                         </form>
                     </div>
                 </div>
-                <div class="col-2"></div>
+                <div class="col-2"><a onclick="startRefresh();" class="btn btn-info" target="_blank">Refresh Database Device Status</a></div>
                 <div class="col-3 justify-content-center">
                     <p style="font-size: 20px"><b>Auto Refresh Timer</b></p>
                     <select id="timerSelect" style="width: 100%" onchange="changeTimer(this)">
@@ -400,6 +437,29 @@ td {
 
 <script>
 
+function startRefresh(){
+    $.ajax({
+        url: '/lastOnlineRef',
+        type: 'get',
+        success: feedback => {
+            document.getElementById("overlay2").style.display = "block";
+
+            console.log(feedback);                        
+            var resInterval = setInterval(function () {
+                $.ajax({
+                    url: '/lastOnLogs.txt',
+                    type: 'get',
+                    success: feedback1 => {
+                        document.getElementById("debugOutput").innerHTML = feedback1;
+
+                        console.log(feedback1);                        
+                        
+                    }
+                });
+            }, 10000);
+        }
+    });
+}
 var setTimer = 60*5;
 $( document ).ready(function() {
     $( "#allHubsDiv" ).sortable({ helper: 'clone' });
@@ -757,6 +817,14 @@ function deleteEmp(){
 function off() {
 
   document.getElementById("overlay").style.display = "none";
+
+
+
+}
+
+function off1() {
+
+document.getElementById("overlay2").style.display = "none";
 
 
 

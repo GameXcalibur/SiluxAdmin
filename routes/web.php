@@ -16,6 +16,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/users', [App\Http\Controllers\HomeController::class, 'getUsers'])->name('users');
 
 Route::get('/cellRep', [App\Http\Controllers\HomeController::class, 'hsbcCellReport'])->name('cellRep');
+Route::get('/lastOnlineRef', [App\Http\Controllers\HomeController::class, 'lastOnlineRef'])->name('lastOnlineRef');
+
 
 
 Route::post('/loginsil', [App\Http\Controllers\HomeController::class, 'login2'])->name('login.2');

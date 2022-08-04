@@ -1306,7 +1306,7 @@ class HomeController extends Controller
     }
 
     public function lastOnlineRef(){
-        $ret = exec('lynx -dump http://156.38.138.34/RelayServerPullLogs/manualRefresh.php > lastOnLogs.txt &');
+        $ret = exec('curl http://156.38.138.34/RelayServerPullLogs/manualRefresh.php > lastOnLogs.txt &');
         return $ret;
     }
 

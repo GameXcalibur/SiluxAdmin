@@ -44,6 +44,20 @@ class HomeController extends Controller
 
     }
 
+
+
+    public function logViewer(){
+
+        $hubs = \DB::select('SELECT DISTINCT hubSerial, hubName FROM hubPermissions');
+
+        //dd($hubs);
+
+        return view('logViewer', [
+            'hubs' => $hubs
+        ]);
+
+    }
+
     public function deleteDevice(Request $request){
         $data = $request->all();
         $returnObj = [];
@@ -1183,7 +1197,7 @@ class HomeController extends Controller
 
 
         $hsbcCells = \DB::select('SELECT * FROM hsbc_cellNumber_link');
-        $fileName = 'tasks.csv';
+        $fileName = 'hsbcRep.csv';
      
              $headers = array(
                  "Content-type"        => "text/csv",
@@ -1200,6 +1214,10 @@ class HomeController extends Controller
                  fputcsv($file, $columns);
      
                  foreach($hsbcCells as $hsbcCell){
+
+                    $expDate = date('Y-m-d', strtotime($hsbcCell->startDate . " +1 year") );
+                    if($expDate < '2023-01-01')
+                        continue;
                     $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$hsbcCell->hubSerialCell.'"');
                     $hub_name = "No Name";
                     $email = "No Email";
@@ -1214,7 +1232,7 @@ class HomeController extends Controller
                      $row['Hub Serial']    = $hsbcCell->hubSerialCell;
                      $row['Cell Number']    = $hsbcCell->cellNumber;
                      $row['Start Date']  = $hsbcCell->startDate;
-                     $row['Expiry Date']  = date('d F Y', strtotime($hsbcCell->startDate . " +1 year") );
+                     $row['Expiry Date']  = date('Y-m-d', strtotime($hsbcCell->startDate . " +1 year") );
                      $row['Hub Assoc. Email']  = $email;
 
      

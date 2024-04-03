@@ -35,6 +35,14 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('heatdash') }}">
+                <i class="material-icons">device_hub</i>
+                <span class="menu-title">Heat Dashboard</span>
+                <div class="badge badge-success d-none"></div>
+            </a>
+        </li>
+
 
 
         <li class="nav-item">
@@ -44,6 +52,9 @@
                 <div class="badge badge-success d-none"></div>
             </a>
         </li>
+
+
+
 
         <!-- <li class="nav-item">
             <a class="nav-link" href="settings.php">

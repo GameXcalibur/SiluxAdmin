@@ -46,6 +46,91 @@ class HomeController extends Controller
 
 
 
+    public function hsbcactive(){
+        $gbUsers = \DB::select('SELECT DISTINCT email FROM users WHERE email LIKE "%GB%"');
+
+        $fileName = 'inactiveGB.csv';
+     
+        $headers = array(
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        );
+
+        $columns = array('Email', 'Status');
+
+        $callback = function() use($gbUsers, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach($gbUsers as $gbUser){
+
+                $hubs = \DB::select('SELECT DISTINCT hubSerial, hubName FROM hubPermissions WHERE email = "'.$gbUser->email.'"');
+                $status = "Inactive";
+                if($hubs)
+                    $status = "Active";
+
+                $row['Email']  = $gbUser->email;
+                $row['Status']    = $status;
+
+
+
+                fputcsv($file, array($row['Email'], $row['Status']));
+            }
+
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
+    }
+
+
+    public function hubOffline(){
+        $hubs = \DB::select('SELECT DISTINCT hubSerial, hubName FROM hubPermissions WHERE hubName LIKE "%GB%"');
+
+        $fileName = 'hubOffline.csv';
+     
+             $headers = array(
+                 "Content-type"        => "text/csv",
+                 "Content-Disposition" => "attachment; filename=$fileName",
+                 "Pragma"              => "no-cache",
+                 "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+                 "Expires"             => "0"
+             );
+     
+             $columns = array('Hub Name', 'Hub Serial', 'Status');
+     
+             $callback = function() use($hubs, $columns) {
+                 $file = fopen('php://output', 'w');
+                 fputcsv($file, $columns);
+     
+                 foreach($hubs as $hub){
+
+                    $devices = \DB::select('SELECT * FROM lastOnline WHERE hubSerial = "'.$hub->hubSerial.'"');
+                    $hubOffline = true;
+                    foreach($devices as $device){
+                        if($device->extra == 'Online')
+                            $hubOffline = false;
+                    }
+                    if($hubOffline == false)
+                        continue;
+                     $row['Hub Name']  = $hub->hubName;
+                     $row['Hub Serial']    = $hub->hubSerial;
+                     $row['Status']    = "Offline";
+
+
+     
+                     fputcsv($file, array($row['Hub Name'], $row['Hub Serial'], $row['Status']));
+                 }
+     
+                 fclose($file);
+             };
+     
+             return response()->stream($callback, 200, $headers);
+
+    }
     public function logViewer(){
 
         $hubs = \DB::select('SELECT DISTINCT hubSerial, hubName FROM hubPermissions');
@@ -75,7 +160,38 @@ class HomeController extends Controller
     }
 
 
+    public function getDeviceAPI(Request $request){
+        $data = $request->all();
+        $returnObj = [];
+        
+        $returnObj['info'] = [];
+        $returnObj['result'] = [];
 
+        if(array_key_exists('items_per_page', $data))
+            $items_per_page = $data['items_per_page'];
+        else{
+            return response()->json(['error' => 'Please provide items_per_page.'], 405); 
+
+        }
+
+        if(array_key_exists('page', $data))
+            $page = $data['page'];
+        else{
+            return response()->json(['error' => 'Please provide page number.'], 404); 
+
+        }
+
+
+        if(array_key_exists('hub_identifier', $data))
+            $hub_identifier = $data['hub_identifier'];
+        else{
+            return response()->json(['error' => 'Please provide hub_identifier.'], 400); 
+
+        }
+        return response()->json($returnObj, 200);
+
+
+    }
     public function getHubInfo(Request $request){
         $data = $request->all();
         $returnObj = [];
@@ -560,7 +676,9 @@ class HomeController extends Controller
         }
 
         foreach($deviceStats as $key=>&$deviceStat){
-            $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$key.'" AND email = "'.\Auth::user()->email.'"');
+           // $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubSerial = "'.$key.'" AND email = "'.\Auth::user()->email.'"');
+            $hubPerm = \DB::select('SELECT * FROM hubPermissions WHERE hubName LIKE %GB%');
+
             if(!$hubPerm){
                 unset($deviceStats[$key]);
                 continue;
@@ -619,8 +737,16 @@ class HomeController extends Controller
         return $result;
     }
 
+    public function heatdash(){
+        return view('heat_dashboard', [
+            
+        ]);
+    }
+
     public function hubs(){
-        $hubsForAccount = \DB::select('SELECT * FROM hubPermissions WHERE email = "'.\Auth::user()->email.'"');
+       $hubsForAccount = \DB::select('SELECT * FROM hubPermissions WHERE email = "'.\Auth::user()->email.'"');
+        //$hubsForAccount = \DB::select('SELECT * FROM hubPermissions WHERE hubName LIKE "%GB%" GROUP BY hubName');
+
         $deviceStats = [];
         foreach($hubsForAccount as $hubForAccount){
 
@@ -1608,6 +1734,6 @@ class HomeController extends Controller
             return redirect()->route('hubs');
 		}
 
-		return redirect()->route('login.2');
+		return redirect()->route('login');
     }
 }

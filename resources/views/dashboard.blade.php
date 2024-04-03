@@ -675,18 +675,7 @@ function myFunction(e) {
 
   var list = document.getElementById("allHubsDiv");
   var divs = list.getElementsByTagName("div");
-  for (var i = 0; i < divs.length; i++) {
-    var a = divs[i].getElementsByTagName("p")[0];
-
-    if (a) {
-      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        divs[i].style.display = "";
-
-      } else {
-        divs[i].style.display = "none";
-      }
-    }
-  }
+  for (var i = 0; i < divs.length; i++) {var a = divs[i].getElementsByTagName("p")[0];if (a) {if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {divs[i].style.display = "";} else {divs[i].style.display = "none";}}}
 
 }
 function getHubInitDetails(ser, loadContext, mainContext){
